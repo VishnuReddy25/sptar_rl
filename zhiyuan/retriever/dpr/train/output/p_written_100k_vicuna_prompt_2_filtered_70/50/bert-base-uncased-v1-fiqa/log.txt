@@ -1,0 +1,92 @@
+2025-09-25 05:45:05 - Loading Corpus...
+2025-09-25 05:45:05 - Loaded 57638 Documents.
+2025-09-25 05:45:05 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-25 05:45:05 - Loading Golden Queries...
+2025-09-25 05:45:05 - Loading Weak Queries...
+2025-09-25 05:45:05 - Loading Golden Qrels...
+2025-09-25 05:45:05 - Loading Weak Qrels...
+2025-09-25 05:45:05 - Loaded 7056 Golden+Weak Queries.
+2025-09-25 05:45:05 - Golden+Weak Query Example: Sales Tax Licence/Permit - When is it required and how can I make a use of it as a non-US resident selling in USA?
+2025-09-25 05:45:05 - Loading Corpus...
+2025-09-25 05:45:05 - Loaded 57638 Documents.
+2025-09-25 05:45:05 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-25 05:45:05 - Loading Queries...
+2025-09-25 05:45:05 - Loaded 500 Queries.
+2025-09-25 05:45:05 - Query Example: Claiming business expenses for a business with no income
+2025-09-25 05:45:07 - Loaded 7392 training pairs.
+2025-09-25 05:45:07 - dev set contains 57638 documents and 500 queries
+2025-09-25 05:45:07 - Starting to Train...
+2025-09-25 05:47:00 - Information Retrieval Evaluation on dev dataset after epoch 0:
+2025-09-25 05:53:11 - Queries: 500
+2025-09-25 05:53:11 - Corpus: 57638
+
+2025-09-25 05:53:11 - Score-Function: cos_sim
+2025-09-25 05:53:11 - Accuracy@1: 16.40%
+2025-09-25 05:53:11 - Accuracy@3: 27.20%
+2025-09-25 05:53:11 - Accuracy@5: 32.80%
+2025-09-25 05:53:11 - Accuracy@10: 38.80%
+2025-09-25 05:53:11 - Precision@1: 16.40%
+2025-09-25 05:53:11 - Precision@3: 10.13%
+2025-09-25 05:53:11 - Precision@5: 7.88%
+2025-09-25 05:53:11 - Precision@10: 5.18%
+2025-09-25 05:53:11 - Recall@1: 8.01%
+2025-09-25 05:53:11 - Recall@3: 14.85%
+2025-09-25 05:53:11 - Recall@5: 18.44%
+2025-09-25 05:53:11 - Recall@10: 23.26%
+2025-09-25 05:53:11 - MRR@10: 0.2290
+2025-09-25 05:53:11 - NDCG@10: 0.1804
+2025-09-25 05:53:11 - MAP@100: 0.1453
+2025-09-25 05:53:11 - Score-Function: dot_score
+2025-09-25 05:53:11 - Accuracy@1: 10.60%
+2025-09-25 05:53:11 - Accuracy@3: 21.00%
+2025-09-25 05:53:11 - Accuracy@5: 24.80%
+2025-09-25 05:53:11 - Accuracy@10: 31.60%
+2025-09-25 05:53:11 - Precision@1: 10.60%
+2025-09-25 05:53:11 - Precision@3: 7.73%
+2025-09-25 05:53:11 - Precision@5: 5.68%
+2025-09-25 05:53:11 - Precision@10: 4.04%
+2025-09-25 05:53:11 - Recall@1: 5.26%
+2025-09-25 05:53:11 - Recall@3: 11.32%
+2025-09-25 05:53:11 - Recall@5: 13.37%
+2025-09-25 05:53:11 - Recall@10: 18.29%
+2025-09-25 05:53:11 - MRR@10: 0.1674
+2025-09-25 05:53:11 - NDCG@10: 0.1344
+2025-09-25 05:53:11 - MAP@100: 0.1062
+2025-09-25 05:53:11 - Save model to /home/aiml_cse/vishnu/SPTAR_v1/zhiyuan/retriever/dpr/train/output/p_written_100k_vicuna_prompt_2_filtered_70/50/bert-base-uncased-v1-fiqa
+2025-09-25 05:55:03 - Information Retrieval Evaluation on dev dataset after epoch 1:
+2025-09-25 06:01:14 - Queries: 500
+2025-09-25 06:01:14 - Corpus: 57638
+
+2025-09-25 06:01:14 - Score-Function: cos_sim
+2025-09-25 06:01:14 - Accuracy@1: 17.80%
+2025-09-25 06:01:14 - Accuracy@3: 30.20%
+2025-09-25 06:01:14 - Accuracy@5: 35.20%
+2025-09-25 06:01:14 - Accuracy@10: 42.00%
+2025-09-25 06:01:14 - Precision@1: 17.80%
+2025-09-25 06:01:14 - Precision@3: 11.60%
+2025-09-25 06:01:14 - Precision@5: 8.52%
+2025-09-25 06:01:14 - Precision@10: 5.74%
+2025-09-25 06:01:14 - Recall@1: 9.69%
+2025-09-25 06:01:14 - Recall@3: 17.15%
+2025-09-25 06:01:14 - Recall@5: 20.37%
+2025-09-25 06:01:14 - Recall@10: 26.17%
+2025-09-25 06:01:14 - MRR@10: 0.2513
+2025-09-25 06:01:14 - NDCG@10: 0.2057
+2025-09-25 06:01:14 - MAP@100: 0.1670
+2025-09-25 06:01:14 - Score-Function: dot_score
+2025-09-25 06:01:14 - Accuracy@1: 12.40%
+2025-09-25 06:01:14 - Accuracy@3: 21.60%
+2025-09-25 06:01:14 - Accuracy@5: 25.60%
+2025-09-25 06:01:14 - Accuracy@10: 35.60%
+2025-09-25 06:01:14 - Precision@1: 12.40%
+2025-09-25 06:01:14 - Precision@3: 7.93%
+2025-09-25 06:01:14 - Precision@5: 6.04%
+2025-09-25 06:01:14 - Precision@10: 4.56%
+2025-09-25 06:01:14 - Recall@1: 6.24%
+2025-09-25 06:01:14 - Recall@3: 11.57%
+2025-09-25 06:01:14 - Recall@5: 14.31%
+2025-09-25 06:01:14 - Recall@10: 20.73%
+2025-09-25 06:01:14 - MRR@10: 0.1872
+2025-09-25 06:01:14 - NDCG@10: 0.1509
+2025-09-25 06:01:14 - MAP@100: 0.1187
+2025-09-25 06:01:14 - Save model to /home/aiml_cse/vishnu/SPTAR_v1/zhiyuan/retriever/dpr/train/output/p_written_100k_vicuna_prompt_2_filtered_70/50/bert-base-uncased-v1-fiqa

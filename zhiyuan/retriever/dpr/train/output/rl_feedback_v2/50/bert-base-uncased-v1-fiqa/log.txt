@@ -1,0 +1,162 @@
+2025-10-22 07:05:08 - Starting RL-Feedback Training for fiqa
+2025-10-22 07:05:08 - Experiment: rl_feedback_v2, Train samples: 50
+2025-10-22 07:07:01 - Starting RL-Feedback Training for fiqa
+2025-10-22 07:07:01 - Experiment: rl_feedback_v2, Base data: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70, Train samples: 50
+2025-10-22 07:07:01 - Loading weak data from: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70
+2025-10-22 07:07:01 - Loading Corpus...
+2025-10-22 07:07:02 - Loaded 57638 Documents.
+2025-10-22 07:07:02 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 07:07:02 - Loading Golden Queries...
+2025-10-22 07:07:02 - Loading Weak Queries...
+2025-10-22 07:07:02 - Loading Golden Qrels...
+2025-10-22 07:07:02 - Loading Weak Qrels...
+2025-10-22 07:07:02 - Loaded 24558 Golden+Weak Queries.
+2025-10-22 07:07:02 - Golden+Weak Query Example: Sales Tax Licence/Permit - When is it required and how can I make a use of it as a non-US resident selling in USA?
+2025-10-22 07:07:02 - Loading Corpus...
+2025-10-22 07:07:02 - Loaded 57638 Documents.
+2025-10-22 07:07:02 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 07:07:02 - Loading Queries...
+2025-10-22 07:07:02 - Loaded 500 Queries.
+2025-10-22 07:07:02 - Query Example: Claiming business expenses for a business with no income
+2025-10-22 07:07:08 - Device: cuda
+2025-10-22 07:07:08 - Loaded 24894 training pairs.
+2025-10-22 07:14:11 - Starting RL-Feedback Training for fiqa
+2025-10-22 07:14:11 - Experiment: rl_feedback_v2, Base data: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70, Train samples: 50
+2025-10-22 07:14:11 - Loading weak data from: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70
+2025-10-22 07:14:11 - Loading Corpus...
+2025-10-22 07:14:11 - Loaded 57638 Documents.
+2025-10-22 07:14:11 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 07:14:11 - Loading Golden Queries...
+2025-10-22 07:14:11 - Loading Weak Queries...
+2025-10-22 07:14:11 - Loading Golden Qrels...
+2025-10-22 07:14:11 - Loading Weak Qrels...
+2025-10-22 07:14:11 - Loaded 24558 Golden+Weak Queries.
+2025-10-22 07:14:11 - Golden+Weak Query Example: Sales Tax Licence/Permit - When is it required and how can I make a use of it as a non-US resident selling in USA?
+2025-10-22 07:14:11 - Loading Corpus...
+2025-10-22 07:14:11 - Loaded 57638 Documents.
+2025-10-22 07:14:11 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 07:14:11 - Loading Queries...
+2025-10-22 07:14:11 - Loaded 500 Queries.
+2025-10-22 07:14:11 - Query Example: Claiming business expenses for a business with no income
+2025-10-22 07:14:48 - Device: cuda
+2025-10-22 07:14:48 - Loaded 24894 training pairs.
+2025-10-22 07:14:48 - Setting up IR evaluation
+2025-10-22 07:14:48 - dev set contains 57638 documents and 500 queries
+2025-10-22 07:14:48 - Training config: epochs=2, warmup_steps=311
+2025-10-22 07:14:48 - >>> Starting RL-feedback training...
+2025-10-22 07:14:48 - Starting to Train...
+2025-10-22 07:19:51 - Information Retrieval Evaluation of the model on the dev dataset in epoch 1.0 after 1556 steps:
+2025-10-22 07:21:18 - Queries: 500
+2025-10-22 07:21:18 - Corpus: 57638
+
+2025-10-22 07:21:18 - Score-Function: cosine
+2025-10-22 07:21:18 - Accuracy@1: 19.80%
+2025-10-22 07:21:18 - Accuracy@3: 33.60%
+2025-10-22 07:21:18 - Accuracy@5: 39.80%
+2025-10-22 07:21:18 - Accuracy@10: 46.00%
+2025-10-22 07:21:18 - Precision@1: 19.80%
+2025-10-22 07:21:18 - Precision@3: 13.07%
+2025-10-22 07:21:18 - Precision@5: 9.68%
+2025-10-22 07:21:18 - Precision@10: 6.34%
+2025-10-22 07:21:18 - Recall@1: 10.61%
+2025-10-22 07:21:18 - Recall@3: 19.40%
+2025-10-22 07:21:18 - Recall@5: 23.02%
+2025-10-22 07:21:18 - Recall@10: 28.66%
+2025-10-22 07:21:18 - MRR@10: 0.2788
+2025-10-22 07:21:18 - NDCG@10: 0.2273
+2025-10-22 07:21:18 - MAP@100: 0.1848
+2025-10-22 07:21:18 - [Epoch 1.0 | Step 1556] Eval score: 0.2272705875529827
+2025-10-22 07:21:18 - Save model to /home/aiml_user/shankar/sptar_v1/zhiyuan/retriever/dpr/train/output/rl_feedback_v2/50/bert-base-uncased-v1-fiqa
+2025-10-22 07:26:24 - Information Retrieval Evaluation of the model on the dev dataset in epoch 2.0 after 3112 steps:
+2025-10-22 07:27:50 - Queries: 500
+2025-10-22 07:27:50 - Corpus: 57638
+
+2025-10-22 07:27:50 - Score-Function: cosine
+2025-10-22 07:27:50 - Accuracy@1: 23.20%
+2025-10-22 07:27:50 - Accuracy@3: 35.60%
+2025-10-22 07:27:50 - Accuracy@5: 40.80%
+2025-10-22 07:27:50 - Accuracy@10: 46.60%
+2025-10-22 07:27:50 - Precision@1: 23.20%
+2025-10-22 07:27:50 - Precision@3: 13.87%
+2025-10-22 07:27:50 - Precision@5: 10.44%
+2025-10-22 07:27:50 - Precision@10: 6.56%
+2025-10-22 07:27:50 - Recall@1: 12.89%
+2025-10-22 07:27:50 - Recall@3: 20.78%
+2025-10-22 07:27:50 - Recall@5: 24.95%
+2025-10-22 07:27:50 - Recall@10: 29.06%
+2025-10-22 07:27:50 - MRR@10: 0.3041
+2025-10-22 07:27:50 - NDCG@10: 0.2447
+2025-10-22 07:27:50 - MAP@100: 0.2056
+2025-10-22 07:27:50 - [Epoch 2.0 | Step 3112] Eval score: 0.24470651102802837
+2025-10-22 07:27:50 - Save model to /home/aiml_user/shankar/sptar_v1/zhiyuan/retriever/dpr/train/output/rl_feedback_v2/50/bert-base-uncased-v1-fiqa
+2025-10-22 07:27:51 - Final evaluation score: None
+2025-10-22 08:15:56 - Starting RL-Feedback Training for fiqa
+2025-10-22 08:15:56 - Experiment: rl_feedback_v2, Base data: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70, Train samples: 50
+2025-10-22 08:15:56 - Loading weak data from: llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70
+2025-10-22 08:15:56 - Loading Corpus...
+2025-10-22 08:15:56 - Loaded 57638 Documents.
+2025-10-22 08:15:56 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 08:15:56 - Loading Golden Queries...
+2025-10-22 08:15:56 - Loading Weak Queries...
+2025-10-22 08:15:56 - Loading Golden Qrels...
+2025-10-22 08:15:56 - Loading Weak Qrels...
+2025-10-22 08:15:56 - Loaded 24558 Golden+Weak Queries.
+2025-10-22 08:15:56 - Golden+Weak Query Example: Sales Tax Licence/Permit - When is it required and how can I make a use of it as a non-US resident selling in USA?
+2025-10-22 08:15:56 - Loading Corpus...
+2025-10-22 08:15:56 - Loaded 57638 Documents.
+2025-10-22 08:15:56 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-10-22 08:15:56 - Loading Queries...
+2025-10-22 08:15:56 - Loaded 500 Queries.
+2025-10-22 08:15:56 - Query Example: Claiming business expenses for a business with no income
+2025-10-22 08:16:04 - Device: cuda
+2025-10-22 08:16:04 - Loaded 24894 training pairs.
+2025-10-22 08:16:04 - Setting up IR evaluation
+2025-10-22 08:16:04 - dev set contains 57638 documents and 500 queries
+2025-10-22 08:16:04 - Training config: epochs=2, warmup_steps=155
+2025-10-22 08:16:04 - >>> Starting RL-feedback training...
+2025-10-22 08:16:04 - Starting to Train...
+2025-10-22 08:20:24 - Information Retrieval Evaluation of the model on the dev dataset in epoch 1.0 after 778 steps:
+2025-10-22 08:21:48 - Queries: 500
+2025-10-22 08:21:48 - Corpus: 57638
+
+2025-10-22 08:21:49 - Score-Function: cosine
+2025-10-22 08:21:49 - Accuracy@1: 20.60%
+2025-10-22 08:21:49 - Accuracy@3: 34.00%
+2025-10-22 08:21:49 - Accuracy@5: 38.60%
+2025-10-22 08:21:49 - Accuracy@10: 47.80%
+2025-10-22 08:21:49 - Precision@1: 20.60%
+2025-10-22 08:21:49 - Precision@3: 13.33%
+2025-10-22 08:21:49 - Precision@5: 9.96%
+2025-10-22 08:21:49 - Precision@10: 6.68%
+2025-10-22 08:21:49 - Recall@1: 10.47%
+2025-10-22 08:21:49 - Recall@3: 19.14%
+2025-10-22 08:21:49 - Recall@5: 22.77%
+2025-10-22 08:21:49 - Recall@10: 30.12%
+2025-10-22 08:21:49 - MRR@10: 0.2885
+2025-10-22 08:21:49 - NDCG@10: 0.2350
+2025-10-22 08:21:49 - MAP@100: 0.1888
+2025-10-22 08:21:49 - [Epoch 1.0 | Step 778] Eval score: 0.2349791272078252
+2025-10-22 08:21:49 - Save model to /home/aiml_user/shankar/sptar_v1/zhiyuan/retriever/dpr/train/output/rl_feedback_v2/50/bert-base-uncased-v1-fiqa
+2025-10-22 08:26:13 - Information Retrieval Evaluation of the model on the dev dataset in epoch 2.0 after 1556 steps:
+2025-10-22 08:27:38 - Queries: 500
+2025-10-22 08:27:38 - Corpus: 57638
+
+2025-10-22 08:27:38 - Score-Function: cosine
+2025-10-22 08:27:38 - Accuracy@1: 23.80%
+2025-10-22 08:27:38 - Accuracy@3: 35.00%
+2025-10-22 08:27:38 - Accuracy@5: 41.00%
+2025-10-22 08:27:38 - Accuracy@10: 48.60%
+2025-10-22 08:27:38 - Precision@1: 23.80%
+2025-10-22 08:27:38 - Precision@3: 14.13%
+2025-10-22 08:27:38 - Precision@5: 10.56%
+2025-10-22 08:27:38 - Precision@10: 6.74%
+2025-10-22 08:27:38 - Recall@1: 12.33%
+2025-10-22 08:27:38 - Recall@3: 20.29%
+2025-10-22 08:27:38 - Recall@5: 24.89%
+2025-10-22 08:27:38 - Recall@10: 30.45%
+2025-10-22 08:27:38 - MRR@10: 0.3106
+2025-10-22 08:27:38 - NDCG@10: 0.2485
+2025-10-22 08:27:38 - MAP@100: 0.2043
+2025-10-22 08:27:38 - [Epoch 2.0 | Step 1556] Eval score: 0.24848717387807948
+2025-10-22 08:27:38 - Save model to /home/aiml_user/shankar/sptar_v1/zhiyuan/retriever/dpr/train/output/rl_feedback_v2/50/bert-base-uncased-v1-fiqa
+2025-10-22 08:27:39 - Final evaluation score: None

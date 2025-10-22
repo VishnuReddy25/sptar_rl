@@ -1,0 +1,7 @@
+Experiment: rl_feedback_v2
+Dataset: fiqa
+Train samples: 50
+Weak samples: 100k
+Epochs: 2
+RL weight: 0.8
+Final score: None

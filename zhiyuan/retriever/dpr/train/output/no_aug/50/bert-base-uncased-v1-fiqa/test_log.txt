@@ -1,0 +1,270 @@
+2025-09-24 07:56:04 - Load pretrained SentenceTransformer: /home/aiml_cse/vishnu/SPTAR/zhiyuan/retriever/dpr/train/output/no_aug/50/bert-base-uncased-v1-fiqa
+2025-09-24 07:56:04 - Use pytorch device: cuda
+2025-09-24 07:56:04 - Loading Corpus...
+2025-09-24 07:56:05 - Loaded 57638 TEST Documents.
+2025-09-24 07:56:05 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-24 07:56:05 - Loading Queries...
+2025-09-24 07:56:05 - Loaded 648 TEST Queries.
+2025-09-24 07:56:05 - Query Example: How to deposit a cheque issued to an associate in my business into my business account?
+2025-09-24 07:56:05 - Encoding Queries...
+2025-09-24 07:56:07 - Sorting Corpus by document length (Longest first)...
+2025-09-24 07:56:07 - Encoding Corpus in batches... Warning: This might take a while!
+2025-09-24 07:56:07 - Scoring Function: Cosine Similarity (cos_sim)
+2025-09-24 07:56:07 - Encoding Batch 1/1...
+2025-09-24 08:03:28 - Retriever evaluation for dataset fiqa
+2025-09-24 08:03:28 - For evaluation, we ignore identical query and document ids (default), please explicitly set ``ignore_identical_ids=False`` to ignore this.
+2025-09-24 08:03:28 - 
+
+2025-09-24 08:03:28 - NDCG@1: 0.0957
+2025-09-24 08:03:28 - NDCG@3: 0.0897
+2025-09-24 08:03:28 - NDCG@5: 0.0963
+2025-09-24 08:03:28 - NDCG@10: 0.1080
+2025-09-24 08:03:28 - NDCG@100: 0.1580
+2025-09-24 08:03:28 - NDCG@300: 0.1847
+2025-09-24 08:03:28 - NDCG@500: 0.1962
+2025-09-24 08:03:28 - NDCG@1000: 0.2098
+2025-09-24 08:03:28 - 
+
+2025-09-24 08:03:28 - MAP@1: 0.0399
+2025-09-24 08:03:28 - MAP@3: 0.0613
+2025-09-24 08:03:28 - MAP@5: 0.0675
+2025-09-24 08:03:28 - MAP@10: 0.0736
+2025-09-24 08:03:28 - MAP@100: 0.0827
+2025-09-24 08:03:28 - MAP@300: 0.0842
+2025-09-24 08:03:28 - MAP@500: 0.0845
+2025-09-24 08:03:28 - MAP@1000: 0.0848
+2025-09-24 08:03:28 - 
+
+2025-09-24 08:03:28 - Recall@1: 0.0399
+2025-09-24 08:03:28 - Recall@3: 0.0856
+2025-09-24 08:03:28 - Recall@5: 0.1104
+2025-09-24 08:03:28 - Recall@10: 0.1452
+2025-09-24 08:03:28 - Recall@100: 0.3454
+2025-09-24 08:03:28 - Recall@300: 0.5030
+2025-09-24 08:03:28 - Recall@500: 0.5782
+2025-09-24 08:03:28 - Recall@1000: 0.6741
+2025-09-24 08:03:28 - 
+
+2025-09-24 08:03:28 - P@1: 0.0957
+2025-09-24 08:03:28 - P@3: 0.0628
+2025-09-24 08:03:28 - P@5: 0.0494
+2025-09-24 08:03:28 - P@10: 0.0335
+2025-09-24 08:03:28 - P@100: 0.0085
+2025-09-24 08:03:28 - P@300: 0.0042
+2025-09-24 08:03:28 - P@500: 0.0029
+2025-09-24 08:03:28 - P@1000: 0.0017
+2025-09-24 08:21:09 - Load pretrained SentenceTransformer: /home/aiml_cse/vishnu/SPTAR/zhiyuan/retriever/dpr/train/output/no_aug/50/bert-base-uncased-v1-fiqa
+2025-09-24 08:21:10 - Use pytorch device: cuda
+2025-09-24 08:21:10 - Loading Corpus...
+2025-09-24 08:21:10 - Loaded 57638 TEST Documents.
+2025-09-24 08:21:10 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-24 08:21:10 - Loading Queries...
+2025-09-24 08:21:10 - Loaded 648 TEST Queries.
+2025-09-24 08:21:10 - Query Example: How to deposit a cheque issued to an associate in my business into my business account?
+2025-09-24 08:21:10 - Encoding Queries...
+2025-09-24 08:21:13 - Sorting Corpus by document length (Longest first)...
+2025-09-24 08:21:13 - Encoding Corpus in batches... Warning: This might take a while!
+2025-09-24 08:21:13 - Scoring Function: Cosine Similarity (cos_sim)
+2025-09-24 08:21:13 - Encoding Batch 1/1...
+2025-09-24 08:28:30 - Retriever evaluation for dataset fiqa
+2025-09-24 08:28:30 - For evaluation, we ignore identical query and document ids (default), please explicitly set ``ignore_identical_ids=False`` to ignore this.
+2025-09-24 08:28:30 - 
+
+2025-09-24 08:28:30 - NDCG@1: 0.0957
+2025-09-24 08:28:30 - NDCG@3: 0.0897
+2025-09-24 08:28:30 - NDCG@5: 0.0963
+2025-09-24 08:28:30 - NDCG@10: 0.1080
+2025-09-24 08:28:30 - NDCG@100: 0.1580
+2025-09-24 08:28:30 - NDCG@300: 0.1847
+2025-09-24 08:28:30 - NDCG@500: 0.1962
+2025-09-24 08:28:30 - NDCG@1000: 0.2098
+2025-09-24 08:28:30 - 
+
+2025-09-24 08:28:30 - MAP@1: 0.0399
+2025-09-24 08:28:30 - MAP@3: 0.0613
+2025-09-24 08:28:30 - MAP@5: 0.0675
+2025-09-24 08:28:30 - MAP@10: 0.0736
+2025-09-24 08:28:30 - MAP@100: 0.0827
+2025-09-24 08:28:30 - MAP@300: 0.0842
+2025-09-24 08:28:30 - MAP@500: 0.0845
+2025-09-24 08:28:30 - MAP@1000: 0.0848
+2025-09-24 08:28:30 - 
+
+2025-09-24 08:28:30 - Recall@1: 0.0399
+2025-09-24 08:28:30 - Recall@3: 0.0856
+2025-09-24 08:28:30 - Recall@5: 0.1104
+2025-09-24 08:28:30 - Recall@10: 0.1452
+2025-09-24 08:28:30 - Recall@100: 0.3454
+2025-09-24 08:28:30 - Recall@300: 0.5030
+2025-09-24 08:28:30 - Recall@500: 0.5782
+2025-09-24 08:28:30 - Recall@1000: 0.6741
+2025-09-24 08:28:30 - 
+
+2025-09-24 08:28:30 - P@1: 0.0957
+2025-09-24 08:28:30 - P@3: 0.0628
+2025-09-24 08:28:30 - P@5: 0.0494
+2025-09-24 08:28:30 - P@10: 0.0335
+2025-09-24 08:28:30 - P@100: 0.0085
+2025-09-24 08:28:30 - P@300: 0.0042
+2025-09-24 08:28:30 - P@500: 0.0029
+2025-09-24 08:28:30 - P@1000: 0.0017
+2025-09-24 08:33:13 - Load pretrained SentenceTransformer: /home/aiml_cse/vishnu/SPTAR/zhiyuan/retriever/dpr/train/output/no_aug/50/bert-base-uncased-v1-fiqa
+2025-09-24 08:33:14 - Use pytorch device: cuda
+2025-09-24 08:33:14 - Loading Corpus...
+2025-09-24 08:33:14 - Loaded 57638 TEST Documents.
+2025-09-24 08:33:14 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-24 08:33:14 - Loading Queries...
+2025-09-24 08:33:14 - Loaded 648 TEST Queries.
+2025-09-24 08:33:14 - Query Example: How to deposit a cheque issued to an associate in my business into my business account?
+2025-09-24 08:33:14 - Encoding Queries...
+2025-09-24 08:33:17 - Sorting Corpus by document length (Longest first)...
+2025-09-24 08:33:17 - Encoding Corpus in batches... Warning: This might take a while!
+2025-09-24 08:33:17 - Scoring Function: Cosine Similarity (cos_sim)
+2025-09-24 08:33:17 - Encoding Batch 1/1...
+2025-09-24 08:40:35 - Retriever evaluation for dataset fiqa
+2025-09-24 08:40:35 - For evaluation, we ignore identical query and document ids (default), please explicitly set ``ignore_identical_ids=False`` to ignore this.
+2025-09-24 08:40:35 - 
+
+2025-09-24 08:40:35 - NDCG@1: 0.0957
+2025-09-24 08:40:35 - NDCG@3: 0.0897
+2025-09-24 08:40:35 - NDCG@5: 0.0963
+2025-09-24 08:40:35 - NDCG@10: 0.1080
+2025-09-24 08:40:35 - NDCG@100: 0.1580
+2025-09-24 08:40:35 - NDCG@300: 0.1847
+2025-09-24 08:40:35 - NDCG@500: 0.1962
+2025-09-24 08:40:35 - NDCG@1000: 0.2098
+2025-09-24 08:40:35 - 
+
+2025-09-24 08:40:35 - MAP@1: 0.0399
+2025-09-24 08:40:35 - MAP@3: 0.0613
+2025-09-24 08:40:35 - MAP@5: 0.0675
+2025-09-24 08:40:35 - MAP@10: 0.0736
+2025-09-24 08:40:35 - MAP@100: 0.0827
+2025-09-24 08:40:35 - MAP@300: 0.0842
+2025-09-24 08:40:35 - MAP@500: 0.0845
+2025-09-24 08:40:35 - MAP@1000: 0.0848
+2025-09-24 08:40:35 - 
+
+2025-09-24 08:40:35 - Recall@1: 0.0399
+2025-09-24 08:40:35 - Recall@3: 0.0856
+2025-09-24 08:40:35 - Recall@5: 0.1104
+2025-09-24 08:40:35 - Recall@10: 0.1452
+2025-09-24 08:40:35 - Recall@100: 0.3454
+2025-09-24 08:40:35 - Recall@300: 0.5030
+2025-09-24 08:40:35 - Recall@500: 0.5782
+2025-09-24 08:40:35 - Recall@1000: 0.6741
+2025-09-24 08:40:35 - 
+
+2025-09-24 08:40:35 - P@1: 0.0957
+2025-09-24 08:40:35 - P@3: 0.0628
+2025-09-24 08:40:35 - P@5: 0.0494
+2025-09-24 08:40:35 - P@10: 0.0335
+2025-09-24 08:40:35 - P@100: 0.0085
+2025-09-24 08:40:35 - P@300: 0.0042
+2025-09-24 08:40:35 - P@500: 0.0029
+2025-09-24 08:40:35 - P@1000: 0.0017
+2025-09-24 08:40:35 - 
+
+2025-09-24 08:40:35 - MRR@1: 0.0957
+2025-09-24 08:40:35 - MRR@3: 0.1250
+2025-09-24 08:40:35 - MRR@5: 0.1346
+2025-09-24 08:40:35 - MRR@10: 0.1417
+2025-09-24 08:40:35 - MRR@100: 0.1509
+2025-09-24 08:40:35 - MRR@300: 0.1519
+2025-09-24 08:40:35 - MRR@500: 0.1520
+2025-09-24 08:40:35 - MRR@1000: 0.1521
+2025-09-24 08:52:58 - Load pretrained SentenceTransformer: /home/aiml_cse/vishnu/SPTAR/zhiyuan/retriever/dpr/train/output/no_aug/50/bert-base-uncased-v1-fiqa
+2025-09-24 08:52:59 - Use pytorch device: cuda
+2025-09-24 08:52:59 - Loading Corpus...
+2025-09-24 08:52:59 - Loaded 57638 TEST Documents.
+2025-09-24 08:52:59 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-09-24 08:52:59 - Loading Queries...
+2025-09-24 08:52:59 - Loaded 648 TEST Queries.
+2025-09-24 08:52:59 - Query Example: How to deposit a cheque issued to an associate in my business into my business account?
+2025-09-24 08:52:59 - Encoding Queries...
+2025-09-24 08:53:02 - Sorting Corpus by document length (Longest first)...
+2025-09-24 08:53:02 - Encoding Corpus in batches... Warning: This might take a while!
+2025-09-24 08:53:02 - Scoring Function: Cosine Similarity (cos_sim)
+2025-09-24 08:53:02 - Encoding Batch 1/1...
+2025-09-24 09:00:24 - Retriever evaluation for dataset fiqa
+2025-09-24 09:00:24 - For evaluation, we ignore identical query and document ids (default), please explicitly set ``ignore_identical_ids=False`` to ignore this.
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - NDCG@1: 0.0957
+2025-09-24 09:00:24 - NDCG@3: 0.0897
+2025-09-24 09:00:24 - NDCG@5: 0.0963
+2025-09-24 09:00:24 - NDCG@10: 0.1080
+2025-09-24 09:00:24 - NDCG@100: 0.1580
+2025-09-24 09:00:24 - NDCG@300: 0.1847
+2025-09-24 09:00:24 - NDCG@500: 0.1962
+2025-09-24 09:00:24 - NDCG@1000: 0.2098
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - MAP@1: 0.0399
+2025-09-24 09:00:24 - MAP@3: 0.0613
+2025-09-24 09:00:24 - MAP@5: 0.0675
+2025-09-24 09:00:24 - MAP@10: 0.0736
+2025-09-24 09:00:24 - MAP@100: 0.0827
+2025-09-24 09:00:24 - MAP@300: 0.0842
+2025-09-24 09:00:24 - MAP@500: 0.0845
+2025-09-24 09:00:24 - MAP@1000: 0.0848
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - Recall@1: 0.0399
+2025-09-24 09:00:24 - Recall@3: 0.0856
+2025-09-24 09:00:24 - Recall@5: 0.1104
+2025-09-24 09:00:24 - Recall@10: 0.1452
+2025-09-24 09:00:24 - Recall@100: 0.3454
+2025-09-24 09:00:24 - Recall@300: 0.5030
+2025-09-24 09:00:24 - Recall@500: 0.5782
+2025-09-24 09:00:24 - Recall@1000: 0.6741
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - P@1: 0.0957
+2025-09-24 09:00:24 - P@3: 0.0628
+2025-09-24 09:00:24 - P@5: 0.0494
+2025-09-24 09:00:24 - P@10: 0.0335
+2025-09-24 09:00:24 - P@100: 0.0085
+2025-09-24 09:00:24 - P@300: 0.0042
+2025-09-24 09:00:24 - P@500: 0.0029
+2025-09-24 09:00:24 - P@1000: 0.0017
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - MRR@1: 0.0957
+2025-09-24 09:00:24 - MRR@3: 0.1250
+2025-09-24 09:00:24 - MRR@5: 0.1346
+2025-09-24 09:00:24 - MRR@10: 0.1417
+2025-09-24 09:00:24 - MRR@100: 0.1509
+2025-09-24 09:00:24 - MRR@300: 0.1519
+2025-09-24 09:00:24 - MRR@500: 0.1520
+2025-09-24 09:00:24 - MRR@1000: 0.1521
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - NDCG@1: 0.0957
+2025-09-24 09:00:24 - NDCG@3: 0.0897
+2025-09-24 09:00:24 - NDCG@5: 0.0963
+2025-09-24 09:00:24 - NDCG@10: 0.1080
+2025-09-24 09:00:24 - NDCG@100: 0.1580
+2025-09-24 09:00:24 - NDCG@300: 0.1847
+2025-09-24 09:00:24 - NDCG@500: 0.1962
+2025-09-24 09:00:24 - NDCG@1000: 0.2098
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - MAP@1: 0.0399
+2025-09-24 09:00:24 - MAP@3: 0.0613
+2025-09-24 09:00:24 - MAP@5: 0.0675
+2025-09-24 09:00:24 - MAP@10: 0.0736
+2025-09-24 09:00:24 - MAP@100: 0.0827
+2025-09-24 09:00:24 - MAP@300: 0.0842
+2025-09-24 09:00:24 - MAP@500: 0.0845
+2025-09-24 09:00:24 - MAP@1000: 0.0848
+2025-09-24 09:00:24 - 
+
+2025-09-24 09:00:24 - Recall@1: 0.0399
+2025-09-24 09:00:24 - Recall@3: 0.0856
+2025-09-24 09:00:24 - Recall@5: 0.1104
+2025-09-24 09:00:24 - Recall@10: 0.1452
+2025-09-24 09:00:24 - Recall@100: 0.3454
+2025-09-24 09:00:24 - Recall@300: 0.5030
+2025-09-24 09:00:24 - Recall@500: 0.5782
+2025-09-24 09:00:24 - Recall@1000: 0.6741
