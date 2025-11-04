@@ -160,3 +160,7 @@ zhiyuan/datasets/
 **/*.safetensors
 *.Zone.Identifier
 **/*Zone.Identifier
+
+**/models/
+**/llm_models/
+
