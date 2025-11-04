@@ -37,15 +37,15 @@ data_dir = join(cwd, "zhiyuan", "datasets")
 raw_dir = join(data_dir, "raw")
 weak_dir = join(data_dir, "weak")
 beir_dir = join(raw_dir, "beir")
-xuyang_dir = "/home/vn55kb9/proj/LLMsAgumentedIR/xuyang/data"
+xuyang_dir = join(cwd, "xuyang", "data")
 
 #### Download nfcorpus.zip dataset and unzip the dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', required=False, default="msmarco", type=str)
-parser.add_argument('--train_num', required=False, default=50, type=int)
+parser.add_argument('--train_num', required=False, default=500, type=int)
 parser.add_argument('--weak_num', required=False, default="100k", type=str)
-parser.add_argument('--port', required=False, default=8000, type=int)
+parser.add_argument('--port', required=False, default=8002, type=int)
 parser.add_argument('--overwritejsonl', action='store_true')
 parser.add_argument('--reindex', action='store_true')
 parser.add_argument('--exp_name', required=False, default="llama_7b_none_5000", type=str)
@@ -63,7 +63,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s',
                     handlers=[handler])
 
 #
-gen_file_dir = join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", "100k")
+gen_file_dir = join(xuyang_dir, "fiqa_50", "500")
 weak_q_path = join(gen_file_dir, f"weak_queries_{args.train_num}_{args.exp_name}.jsonl")
 weak_qrel_path = join(gen_file_dir, f"weak_train_{args.train_num}_{args.exp_name}.tsv")
 corpus, queries, qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus.jsonl"), query_file=weak_q_path, qrels_file=weak_qrel_path).load_custom()
@@ -126,6 +126,7 @@ for i in tqdm(range(chunk_num)):
     else:
         payload = {"queries": query_texts[i*chunk_size:], "qids": qids[i*chunk_size:], "k": args.topk}
         raw_weak_queries_chunk = {}
+        qrels_chunk = {}
         for qq_id in qids[i*chunk_size:]:
             raw_weak_queries_chunk[qq_id] = raw_weak_queries[qq_id]
             qrels_chunk[qq_id] = qrels[qq_id]

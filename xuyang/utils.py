@@ -26,8 +26,8 @@ def setup_train(args):
 def reset_args(args):
     # reset llm model
     if args.llm_name == 'llama-7b':
-        args.model_name_or_path = "/ssd/public_datasets/llama/llama_to_hf/llama-7b"
-        args.tokenizer_name_or_path = "/ssd/public_datasets/llama/llama_to_hf/llama-7b"
+        args.model_name_or_path = "./models/llama-7b"
+        args.tokenizer_name_or_path = "./models/llama-7b"
     elif args.llm_name == 'vicuna-7b':
         args.model_name_or_path = "/ssd/public_datasets/llama/vicuna-7b"
         args.tokenizer_name_or_path = "/ssd/public_datasets/llama/vicuna-7b"

@@ -10,8 +10,8 @@ class PromptTuringArgs:
         # llm model parameters
         self.llm_name = 'llama-v2-13b' # gpt2, llama-7b, vicuna-7b, llama-v2-13b
         if self.llm_name == 'llama-7b':
-            self.model_name_or_path = "/ssd/public_datasets/llama/llama_to_hf/llama-7b"
-            self.tokenizer_name_or_path = "/ssd/public_datasets/llama/llama_to_hf/llama-7b"
+            self.model_name_or_path = "./models/llama-7b"
+            self.tokenizer_name_or_path = "./models/llama-7b"
         elif self.llm_name == 'vicuna-7b':
             self.model_name_or_path = "/ssd/public_datasets/llama/vicuna-7b"
             self.tokenizer_name_or_path = "/ssd/public_datasets/llama/vicuna-7b"
@@ -49,9 +49,9 @@ class PromptTuringArgs:
 
         # experiments parameters
         self.checkpoint_name = f"{self.dataset_name}_{self.model_name_or_path}_{self.peft_type}_{self.task_type}_v1.pt".replace("/", "_")
-        
+
         # log file
-        self.experiment_dir = '/home/xwu/project/SPTAR/xuyang/llm_models'
+        self.experiment_dir = './xuyang/llm_models'
         self.experiment_description = 'test_pointwise_v1_{}_{}_{}_{}_{}'.format(self.dataset_name, self.peft_model_id, self.num_virtual_tokens, self.few_shot_num, self.prompt_num)
 
 

@@ -1,0 +1,66 @@
+2025-11-02 00:26:34 - Loading Corpus...
+2025-11-02 00:26:34 - Loaded 57638 Documents.
+2025-11-02 00:26:34 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-02 00:26:34 - Loading Queries...
+2025-11-02 00:26:34 - Loaded 500 Queries.
+2025-11-02 00:26:34 - Query Example: What is the difference between a checking and a savings account
+2025-11-02 00:27:15 - Loading Corpus...
+2025-11-02 00:27:15 - Loaded 57638 Documents.
+2025-11-02 00:27:15 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-02 00:27:15 - Loading Queries...
+2025-11-02 00:27:15 - Loaded 500 Queries.
+2025-11-02 00:27:15 - Query Example: What is the difference between a checking and a savings account
+2025-11-02 00:27:15 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-02 00:27:15 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:47:17 - Loading Corpus...
+2025-11-03 09:47:18 - Loaded 57638 Documents.
+2025-11-03 09:47:18 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:47:18 - Loading Queries...
+2025-11-03 09:47:18 - Loaded 500 Queries.
+2025-11-03 09:47:18 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:47:18 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:47:18 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:49:30 - Loading Corpus...
+2025-11-03 09:49:30 - Loaded 57638 Documents.
+2025-11-03 09:49:30 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:49:30 - Loading Queries...
+2025-11-03 09:49:30 - Loaded 500 Queries.
+2025-11-03 09:49:30 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:49:30 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:49:30 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:50:34 - Loading Corpus...
+2025-11-03 09:50:35 - Loaded 57638 Documents.
+2025-11-03 09:50:35 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:50:35 - Loading Queries...
+2025-11-03 09:50:35 - Loaded 500 Queries.
+2025-11-03 09:50:35 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:50:35 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:50:35 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:52:29 - Loading Corpus...
+2025-11-03 09:52:29 - Loaded 57638 Documents.
+2025-11-03 09:52:29 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:52:29 - Loading Queries...
+2025-11-03 09:52:29 - Loaded 500 Queries.
+2025-11-03 09:52:29 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:52:29 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:52:29 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:53:33 - Loading Corpus...
+2025-11-03 09:53:34 - Loaded 57638 Documents.
+2025-11-03 09:53:34 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:53:34 - Loading Queries...
+2025-11-03 09:53:34 - Loaded 500 Queries.
+2025-11-03 09:53:34 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:53:34 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:53:34 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:55:59 - Loading Corpus...
+2025-11-03 09:55:59 - Loaded 57638 Documents.
+2025-11-03 09:55:59 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2025-11-03 09:55:59 - Loading Queries...
+2025-11-03 09:55:59 - Loaded 500 Queries.
+2025-11-03 09:55:59 - Query Example: What is the difference between a checking and a savings account
+2025-11-03 09:56:05 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl
+2025-11-03 09:56:05 - del old /home/aiml_user/vishnu/sptar_rl/xuyang/data/fiqa_50/500/weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv
+2025-11-03 09:56:10 - Before filter:
+2025-11-03 09:56:10 - There are 500 weak queries
+2025-11-03 09:56:10 - After filter:
+2025-11-03 09:56:10 - There are 160 weak queries

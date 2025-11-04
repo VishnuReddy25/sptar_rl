@@ -67,11 +67,11 @@ if args.exp_name == "no_aug":
     corpus, queries, qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv")).load_custom()
 else:
     # add support for loading weak data and ori train as new train
-    weak_query_file = join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", args.weak_num, f"weak_queries_{args.train_num}_{args.exp_name}.jsonl")
-    weak_qrels_file = join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", args.weak_num, f"weak_train_{args.train_num}_{args.exp_name}.tsv")
-    corpus, queries, qrels = WeakDataLoader(corpus_file=join(beir_dir, args.dataset_name, f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv"), weak_query_file=weak_query_file, weak_qrels_file=weak_qrels_file).load_weak_custom()
+    weak_query_file = join(xuyang_dir, "fiqa_50", "500", "weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl")
+    weak_qrels_file = join(xuyang_dir, "fiqa_50", "500", "weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv")
+    corpus, queries, qrels = WeakDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv"), weak_query_file=weak_query_file, weak_qrels_file=weak_qrels_file).load_weak_custom()
 #### Please Note not all datasets contain a dev split, comment out the line if such the case
-dev_corpus, dev_queries, dev_qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(beir_dir, args.dataset_name, "qrels", "dev.tsv")).load_custom()
+dev_corpus, dev_queries, dev_qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(beir_dir, args.dataset_name, "qrels", "dev.tsv")).load_custom()
 
 #### Provide any sentence-transformers or HF model
 word_embedding_model = models.Transformer(model_name, max_seq_length=350)
@@ -109,7 +109,7 @@ ir_evaluator = retriever.load_ir_evaluator(dev_corpus, dev_queries, dev_qrels, n
 num_epochs = args.num_epochs
 # evaluation_steps = math.ceil(len(train_samples)/retriever.batch_size)
 # set -1 to evaluate after each epoch
-evaluation_steps = -1
+evaluation_steps = 0
 warmup_steps = int(len(train_samples) * num_epochs / retriever.batch_size * 0.1)
 
 print(">>> Starting training now...", flush=True)
