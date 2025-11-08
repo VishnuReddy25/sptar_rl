@@ -7,265 +7,247 @@ tags:
 - generated_from_trainer
 - dataset_size:646
 - loss:MultipleNegativesRankingLoss
-base_model: google-bert/bert-base-uncased
 widget:
-- source_sentence: Can I change my loan term from 60 to 36 months?
+- source_sentence: What are the differences between a 'grammar Nazi' and a 'grammar
+    Nazi'
   sentences:
-  - ' Some places banks/Credit Unions will allow you to refinance a auto loan. My
-    credit Union only does this if the original loan was with another lender. They
-    will send the money to the old lender, then give you a loan under the new terms.
-    They are trying to get your business, not necessarily looking for a way make less
-    money for themselves.  You will have to see how much you will save. Which will
-    be based on the delta of the length of the loan or the change in interest rate,
-    or both. My Credit Union has a calculator to show you the numbers based on keeping
-    the size of the payments the same, or keeping the number of payments the same.  Make
-    sure you understand any limitations regarding the refinance based on the age of
-    the car, and if you are underwater.'
-  - ' Yes, if their record keeping is faulty or failed. It is best to keep all records
-    of repayment.  Incomplete records such as signing for a loan yet no repayment
-    receipt can be at least a headache and at most expensive. The most important document
-    is a record of 0 balance then there is nothing that the courts will allow creditors
-    to collect if their records are faulty.'
-  - ' "I think the question can be answered by realizing that whoever is buying the
-    stock is buying it from someone who can do the same mathematics. Ask your son
-    to imagine that everyone planned to buy the stock exactly one week before Christmas.  Would
-    the price still be cheap?  The problem is that if everyone knows the price will
-    go up, the people who own it already won''t want to sell.  If you''re buying something
-    from someone who doesn''t really want to sell it, you have to pay more to get
-    it.  So the price goes up a week before Christmas, rather than after Christmas.
-    But of course everyone else can figure this out too.  So they are going to buy
-    2 weeks before, but that means the price goes up 2 weeks before rather than 1
-    week.  You play this game over and over, and eventually the expected increased
-    Christmas sales are ""priced in"".  But of course there is a chance people are
-    setting the price based on a mistaken belief. So the winner isn''t the person
-    who buys just before the others, but rather the one who can more accurately predict
-    what the sales will be (this is why insider trading is so tempting even if it''s
-    illegal).  The price you see right now represents what people anticipate the price
-    will be in the future, what dividends are expected in the future, how much risk
-    people think there is, and how that compares with other available investments."'
-- source_sentence: Entering the stock market in a poor economy
+  - ' If English is your second language or not, it is still incumbent on you to be
+    clear. Especially when you are making a strong, specific technical point.  As
+    Adorno said, “what is vaguely put is poorly thought.”  And the quality of your
+    comment is not improved by carping about whether I’m a “grammar Nazi” or not.  That
+    said, autocorrect can get even the best of us.'
+  - ' Typically, the discount is taxable at sale time But what about taxes?  When
+    the company   buys the shares for you, you do not   owe any taxes. You are exercising
+    your   rights under the ESPP. You have bought   some stock. So far so good. When
+    you sell the stock, the discount   that you received when you bought the   stock
+    is generally considered   additional compensation to you, so you   have to pay
+    taxes on it as regular   income. Source: Turbotax.   Second source. Your pretax
+    rate of return would be: 17% (100/85) In your scenario where the stock price is
+    fixed at $100. Your tax rate would be your marginal rate.   If the stock stayed
+    at 100, you would still be taxed as income on $15/share (the discount) and would
+    receive no benefit for holding the stock one year. Assuming you are in the 25%
+    tax bracket, your after tax rate of return would be 13% ((15*.75)+85)/85)'
+  - ' Are there any other losses that can be expected beyond the above? The lender
+    may have to invest some money into the house in order to get it in shape to sell.
+    Also, while the lender possesses the house they are liable to the property taxes
+    and possibly utilities. are there any statutes or pressures to motivate the financial
+    institution to get fair price when the property is sold? The lender is motivated
+    to at least break even when selling the property in order to limit losses on their
+    investment. This means they are very motivated to seek a higher price, but they''re
+    also motivated to sell the property quickly in order to limit their losses due
+    to property taxes. Usually the lender takes a loss of the investment if foreclosure
+    occurs; only 10 percent to 20 percent  of auctioned foreclosed houses did yield
+    a surplus. When the lender sells the foreclosed property using a realtor, they''re
+    motivated to sell it as quickly as possible so long as they break even. In this
+    case there is little motivation to sell the property for a surplus. If the property
+    is being sold via auction, then time is not a factor and the lender will just
+    sell to the highest bidder.'
+- source_sentence: Ideal investments for a recent college grad with very high risk
+    tolerance?
   sentences:
-  - ' Insurance isn''t a product designed to protect against financial loss. The product
-    is designed to allow people to pay a small fee (the premium) for peace of mind.
-    This allows the insured to feel as if their purchase was worthy (they see the
-    potential of loss as a concern and the premiums small enough to allow them to
-    not worry about having a loss). Insurance companies will then seek out insurable
-    risks where the perceived losses far out weight the actual losses (risk assessment).
-    So, you answer is that your friends are paying for peace of mind.'
-  - ' Well, you probably already know this, but no-one can guarantee you results...in
-    any economic climate.  Even traditionally low risk investments now seem higher
-    risk to people when the economic forecasts are grim.  That being said, 0.5% is
-    pretty low.  So, where does that leave you? Why not start with a risk tolerance
-    analysis for yourself.  There''s a bunch on them on the internet if you google
-    it.  Here''s one:  Rutgers Financial Risk Tolerance Quiz Based on the result you
-    get back, and whether you agree with it or not, this may give you a starting point
-    for determining if entering the stock market is right for you.  I''m guessing
-    you can get better than 0.5% return over 10 years pretty easily though.'
-  - ' I think you''re dancing with the line here, this question is hard to back up
-    without opinions and could really be three different questions. I''m going to
-    push aside the part about quality and reliability, that could be an emotional
-    subject. So from a price standpoint, there''s virtually no disagrement that it
-    makes financial sense to buy a used car instead of a new car. The majority of
-    new cars lose the majority of  their resale value within the first year or two.
-    If you purchase said car after someone else has used it for the first two years,
-    you just avoided all of that depreciation yourself, and you''re still going to
-    be purchasing a perfectly reliable car as long as you are diligent in the buying
-    process.'
-- source_sentence: How do you tell your story to get an actuary position
+  - ' "You file taxes as usual. W2 is a form given to you, you don''t need to fill
+    it. Similarly, 1099. Both report moneys paid to you by your employers. W2 is for
+    actual employer (the one where you''re on the payroll), 1099 is for contractors
+    (where you invoice the entity you provide services to and get paid per contract).
+    You need to look at form 1040 and its instructions as to how exactly to fill it.
+    That would be the annual tax return. It has various schedules (A, B, C, D, E,
+    F, H, etc) which you should familiarize yourself with, and various additional
+    forms that you attach to it. If you''re self employed, you''re expected  to make
+    quarterly estimate payments, but if you''re a salaried employee you can instruct
+    your employer to withhold the amounts you expect to owe for taxes from your salary,
+    instead. If you''re using a tax preparation software (like TurboTax or TaxAct),
+    it will ""interview"" you to get all the needed information and provide you with
+    the forms filled accordingly. Alternatively you can pay someone to prepare the
+    tax return for you."'
+  - ' Theoretically there is limited demand for risky investments, so higher-risk
+    asset classes should outperform lower-risk asset classes over sufficiently long
+    time periods. In practice, I believe this is true, but it could be several decades
+    before a risky portfolio starts to outperform a more conservative one. Stocks
+    are considered more risky than most assets. Small-cap stocks and emerging market
+    stocks are particularly high-risk. I would consider low-fee ETFs in these areas,
+    like VB or VWO. If you want to seek out the absolute riskiest investments, you
+    could pick individual stocks of companies in dire financial situations, as Bank
+    of America was a couple years ago. Most importantly, if you don''t expect to need
+    the money soon, I would maximize your contribution to tax-advantaged accounts
+    since they will grow exponentially faster than taxable accounts. Over 50 years,
+    a 401(k) or IRA will generally grow at least 50% more than a taxable account,
+    maybe more depending on the tax-efficiency of your investments. Try to contribute
+    the maximum ($17,500 for most people in 2014) if you can. If you can save more
+    than that, I''d suggest contributing a Roth 401k rather than a traditional 401(k)
+    - since Roth contributions are post-tax, the effective contribution limit is higher.
+    Also contribute to a Roth IRA (up to $5,500 in 2014), using a backdoor Roth if
+    necessary.'
+  - ' "With these income levels you cannot deduct any IRA contribution. I.e.: you
+    cannot save pre-tax, as you want. But you still can contribute to IRA (as a non-deductible
+    contribution), and using the ""loophole"" transfer the contribution to Roth (you
+    are probably over the limit to be able to contribute to Roth directly). For pre-tax
+    contributions - max out your 401k."'
+- source_sentence: How much money do you need to live in Phoenix
   sentences:
-  - ' "fennec has a very good answer but i feel it provides too much information.
-    So i''ll just try to explain what that sentence says. Put option is the right
-    to sell a stock. ""16 puts on Cisco at 71 cents"", means John comes to Jim and
-    says, i''ll give you 71 cent now, if you allow me to sell one share of Cisco to
-    you at $16 at some point in the future ( on expiration date).  NYT quote says
-    1000 puts that means 1000 contracts - he bought a right to sell 100,000 shares
-    of Cisco on some day at $16/share. Call option - same idea: right to buy a stock."'
-  - ' Yes, it is safe, we have been doing it for years. We prefer our tenants to make
-    their rent payments in this manner. In fact, we prefer that they set up an automatic
-    payment for the rent, either through their online banking or through their bank
-    directly. Apart from getting your rent on time, this method also has the added
-    benefit of both parties having their own records of rent payments through their
-    bank statements, in case there is a dispute about the rent sometime down the track.
-    Having a separate bank account just for the rent does make sense as well, it makes
-    it easier for you to check if rent has come in, it makes it easier if you need
-    to compare your statement without having to highlight all the rent payments amongst
-    all other payments (you might not want to show your other incomes and spending
-    habits to others), and you can withdraw the rents to your other account (which
-    might offer higher interest) after it has come in, leaving a small balance most
-    of the time in your rent account.'
-  - ' "Embrace the role and learn how to tell your story. Find an interesting way
-    to tie your past experience, education, and goals directly to the role you want.   If
-    you can show that you are glowing interest with the background and skills you
-    have then you will have no problem finding a quant-type role. You need to make
-    it sound like everything you have done up to this point was to prepare you for
-    this type of role (e.g. ""I accepted a SE role so that I could take steps toward
-    learning how to implement the types of Actuarial models I learned at my previous
-    gig on a larger scale, how to integrate those models with others, etc.."").  Source:
-    Was in similar position and achieved similar goal."'
-- source_sentence: Tenant wants to pay rent with EFT
+  - ' "Gnucash is much more designed for accounting than for budgeting. While it does
+    have some simple budgeting features, they''re largely based around tracking how
+    much has been spent in the Expense categories/accounts, and seeing how close one
+    is to a limit that''s been set. Because the point of Gnucash is accounting, there''s
+    not a way to track an expense in two expense categories simultaneously. (You can
+    split a transaction across multiple categories, to have a grocery store purchase
+    of $150 be split across $100 Food and $50 Phone Minutes or whatever. But not have
+    a $150 purchase be tracked as $150 Food and $150 Household expenses, because that''s
+    not how double-entry accounting works.) The closest way to do what I think you''re
+    looking for is to take advantage of the hierarchical account structure, and repeat
+    subcategories as needed. For example: This would allow you to see Household expenses
+    vs. Vacation expenses, and still see what it got spent on. Reporting on all ""Food""
+    purchases, if you want to do so, is slightly more tricky as you''d need to select
+    all those ""Food"" categories separately in your report, but it''s possible. You
+    speak about wanting to ""track"" expenses multiple ways, so I think that this
+    would allow you to record data sufficient to ""track"" it. But the point of tracking
+    any data is to be able to report on it in some fashion, so if you have more specific
+    reporting requirements, you might want to ask about that as well."'
+  - ' The point of insurance is to trade high variable costs for much lower fixed
+    costs. The question isn''t whether you can afford what would be a catastrophic
+    event for anyone else, but whether it would be better to pay a small amount regularly
+    vs. a possibly larger amount occasionally. One of the reasons to buy insurance
+    is to avoid costly litigation (rich people are more frequently targeted for litigation).
+    By purchasing liability insurance, the insurance company pays for the litigation
+    and/or settlement. If you are wealthy enough to keep an experienced litigation
+    firm on retainer, you may not need that benefit, but it might be worth giving
+    that stress to a third party. Life insurance is also an important part of estate
+    planning because of the tax treatment of insurance payouts compared to the tax
+    treatment of a large estate. There are certainly classes of insurance that make
+    less sense for those with great cash flow, but money doesn''t obviate all the
+    benefits of insurance.'
+  - ' In Phoenix you can get a two bedroom for $600/mo in an okay neighborhood if
+    you know where/when to look, and a bit cheaper if you''re willing to go a bit
+    skeezier. Since we are talking minimum wage, you should be hopefully be able to
+    find a job within biking distance (or, if you live in Tempe, take the free bus.)
+    Have one person work mornings and the other work evenings/nights and you don''t
+    need daycare. (Other options: have them stay with a nearby family member, trade
+    off watching the kids with other working families, or go for a three bedroom,
+    grab a family member, and have someone work a 20-hr week instead.) Electricity
+    averages to something like $100/mo over the course of the year (my high was about
+    $150, low was around $40 in a two-bedroom.) So ~$700/mo for shelter, maybe $30/mo
+    for a bus pass. That''s $730/mo. I''m not saying it would be comfortable, but
+    it can be done.'
+- source_sentence: Is the food at In n Out really that bad
   sentences:
-  - ' The cost of an extra 30 days is $1459.80'
-  - ' "The biggest disadvantage to you is that your tenant now knows your bank information,
-    which means he can easily identify your source of money in the event he wins a
-    lawsuit and wins a judgement.  He will be able to have a court marshall freeze
-    your account. However, if you deposit your tenant''s check into your account as
-    opposed to an EFT, then your tenant can basically still obtain your bank account
-    information and freeze your account, it would just take him a bit longer to get
-    that information. I am definitely anti-landlord in these situations because I''ve
-    had to deal with so many bad ones here in NYC, but as a landlord, the best thing
-    you can do is to create a ""buffer"" account for you to deposit tenant rent money
-    into, then transfer the money from the buffer account to your regular account.  This
-    would prevent the tenant from knowing your personal bank information and greatly
-    delay the tenant receiving his judgement from an assumed court win against you.
-    My source:  I had to take my landlord to court, and after obtaining a judgement,
-    I got a court marshall to begin the process of closing access to her account (she
-    couldn''t access the money in that account).  The process resulted in her sending
-    me a check (assuming from her other account) for the judgement since her account
-    was frozen and she couldn''t access any of her money."'
-  - ' I can''t immediately think of a reason to keep your paycheck and spending account
-    separate, unless it be because you want to keep your savings in a money market
-    or savings account and you deposit your paycheck into a checking account. However,
-    I do have one reason from my experience to keep the bulk of your savings away
-    from accounts that you transfer stuff out of.  I used to keep all my cash savings
-    in an account from which I transferred money into my brokerage account (my paycheck
-    was also deposited there).  A couple of years back a state that I haven''t lived
-    in since I was a child took $40,000 out of my account.  The broker mistakenly
-    told the state I lived there and the state made some mistakes about how much tax
-    I would owe.  Without either one telling me, the state helped themselves to my
-    checking account to cover the bill.  When I called, both acknowledged that they
-    were wrong, but it still took a long time (many months) and lots of letters and
-    threats (I was close to paying a lawyer) before they returned my money.  It was
-    worse because this was my savings for a down payment on a home and having it taken
-    and not returned affected my ability to buy the house I wanted. If I hadn''t had
-    my money in that account, they would have tried to garnish my wages, and would
-    have immediately stopped their attempt once they found out they were in the wrong.
-    Now I keep cash savings in an account that I never pay taxes out of and do not
-    use to transfer money directly to any broker or anyone who might give my account
-    number to an inept government.'
-- source_sentence: Tenant wants to pay rent with EFT
+  - ' "Systemic and well know patterns in sales are priced in to the security.  Typically
+    companies with very cyclical earnings like this will issue guidance of earnings
+    per share within a range.  These expected earnings are priced in before the earnings
+    are actually booked.  If a company meets these expectations the stock will likely
+    stay relatively flat.  If the company misses this expectation, the stock, generally,
+    will get slammed.   This kind of Wall Street behavior typically mystifies media
+    outlets when a company''s stock declines after reporting a record high level of
+    whatever metric.  The record high is irrelevant if it misses the expectation.
+    There is no crystal ball but if something is both well known and expected it''s
+    already been ""priced in.""  If the well known expected event doesn''t occur,
+    maybe it''s a new normal."'
+  - ' Meh.  In n Out is cheap, and I know it has pop culture appeal, but their actual
+    food is mediocre at best.  They don''t even offer anything unique except very
+    basic burgers with almost no toppings, limp fries, and artificial milkshakes.'
+  - ' Disclaimer: I am not a tax specialist You probably need a sales tax permit if
+    you''re going to sell goods, since just about every state taxes goods, though
+    some states have exemptions for various types of goods.  For services, it gets
+    tricker. There is a database here that lists what services are taxed in what states;
+    in Wyoming, for example, cellphone services and diaper services are taxed, while
+    insurance services and barber services are not.  For selling over the internet,
+    it gets even dicier. There''s a guide on nolo.com that claims to be comprehensive;
+    it states that the default rule of thumb is that if you have a physical presence
+    in a state, such as a warehouse or a retail shop or an office, you must collect
+    tax on sales in that state. Given your situation, you probably only need to collect
+    sales tax on customers in Wyoming. Probably.  In any event, I''d advice having
+    a chat with an accountant in Wyoming who can help walk you through what permits
+    may or may not be needed.'
+- source_sentence: Why do people buy insurance even if they have the means to overcome
+    the loss?
   sentences:
-  - ' You won''t be using my SQL. It probably lists Oracle because that''s the ERP
-    system the company uses, and it''d be good for the FP&amp;A guy to be familiar
-    with the system. Be an expert in Excel, you will probably be using it the majority
-    of your workday.'
-  - ' "How can someone use the account number to withdraw money without my   consent?
-    They can use your account number to game your banks phone support and try to phish
-    their way into your account. Banks have gotten very good at combating this, but
-    theoretically with just the address he lives in, your name, and a bad bank phone
-    rep, he could get into your business. The account number would just be one more
-    piece of information to lead with. I have 1 savings and 3 checking accounts with
-    the same bank. Would they be able to gain access to the other accounts? Dependent
-    on how incompetent the bad bank rep I referenced above is, sure. But the odds
-    are incredibly low, and if anything were to happen, the bank would be falling
-    over itself to fix it and make reparations so that you don''t sue for a whole
-    crap ton more. Is there a more secure and still free option that I have overlooked?
-    Opening up yet another checking account solely for accounts receivable and transfer
-    to accounts payable would keep your financial records more transparent. Also,
-    banks are doing ""money transfer by email"" now, so I don''t know how great that
-    is for business transactions, but in that instance you''re just giving out an
-    email linked to a money receiving account instead of an actual account number.
-    Paypal is also a pretty good EFT middleman, but their business practices have
-    become shady in the past 5 years."'
-  - ' "Ditto mhoran_psprep.  I''m not quite sure what you''re asking. Where does the
-    money come from? When someone starts a bank, they normally get together a bunch
-    of investors -- perhaps people they know personally, perhaps they sell stock --
-    to raise initial capital. But most of the money in the bank comes from depositors.
-    Fundamentally, what a bank does is take money from depositors and loan it to borrowers.
-    (Banks also borrow money from other banks and from the government.) They charge
-    the borrowers interest on the loan, and they pay depositors interest on their
-    deposits. The difference between those two interest rates is where the bank gets
-    their profit. Where does the money go when you pay it back? As mhoran_psprep said,
-    some of it goes to pay interest to the depositors; some of it goes to pay the
-    bank''s expenses like employee salaries, cost of the building, etc; and some of
-    it goes as profit to the owners or stockholders of the bank. If you''re thinking,
-    ""Wow, I''m paying back a whole lot more than I borrowed"", well, yes. But remember
-    you''re borrowing that money for 20 or 30 years. The bank isn''t making very much
-    money on the loan each year that you have it -- these days something like 4 or
-    5% in the U.S., I don''t know what the going rates are in other countries."'
+  - ' If you have been putting savings away for the longer term and have some extra
+    funds which you would like to take some extra risk on - then I say work yourself
+    out a strategy/plan, get yourself educated and go for it. If it is individual
+    shares you are interested then work out if you prefer to use fundamental analysis,
+    technical analysis or some of both. You can use fundamental analysis to help determine
+    which shares to buy, and then use technical analysis to help determine when to
+    get into and out of a position. You say you are prepared to lose $10,000 in order
+    to try to get higher returns. I don''t know what percentage this $10,000 is of
+    the capital you intend to use in this kind of investments/trading, but lets assume
+    it is 10% - so your total starting capital would be $100,000. The idea now would
+    be to learn about money management, position sizing and risk management. There
+    are plenty of good books on these subjects. If you set a maximum loss for each
+    position you open of 1% of your capital - i.e $1,000, then you would have to get
+    10 straight losses in a row to get to your 10% total loss. You do this by setting
+    stop losses on your positions. I''ll use an example to explain: Say you are looking
+    at a stock priced at $20 and you get a signal to buy it at that price. You now
+    need to determine a stop price which if the stock goes down to, you can say well
+    I may have been wrong on this occasion, the stock price has gone against me so
+    I need to get out now (I put automatic stop loss conditional orders with my broker).
+    You may determine the stop price based on previous support levels, using a percentage
+    of your buy price or another indicator or method. I tend to use the percentage
+    of buy price - lets say you use 10% - so your stop price would be at $18 (10%
+    below your buy price of $20). So now you can work out your position size (the
+    number of shares to buy). Your maximum loss on the position is $2 per share or
+    10% of your position in this stock, but it should also be only 1% of your total
+    capital - being 1% of $100,000 = $1,000. You simply divide $1,000 by $2 to get
+    500 shares to buy.  You then do this with the rest of your positions - with a
+    $100,000 starting capital using a 1% maximum loss per position and a stop loss
+    of 10% you will end up with a maximum of 10 positions. If you use a larger maximum
+    loss per position your position sizes would increase and you would have less positions
+    to open (I would not go higher than 2% maximum loss per position). If you use
+    a larger stop loss percentage then your position sizes would decrease and you
+    would have more positions to open. The larger the stop loss the longer you will
+    potentially be in a position and the smaller the stop loss generally the less
+    time you will be in a position. Also as your total capital increases so will your
+    1% of total capital, just as it would decrease if your total capital decreases.
+    Using this method you can aim for higher risk/ higher return investments and reduce
+    and manage your risk to a desired level. One other thing to consider, don''t let
+    tax determine when you sell an investment. If you are keeping a stock just so
+    you will pay less tax if kept for over 12 months - then you are in real danger
+    of increasing your risk considerably. I would rather pay 50% tax on a 30% return
+    than 25% tax on a 15% return.'
+  - ' Your basic point is correct; the savvy move is to use insurance only to cover
+    losses that would be painful or catastrophic for you. Otherwise, self-insure.
+    In the specific example of car insurance, you may be missing that it doesn''t
+    only cover replacement of the car, it also covers liability, which is a hundreds-of-thousands-of-dollars
+    risk. The liability coverage may well be legally required; it may also be required
+    as a base layer if you want to get a separate umbrella policy up to millions in
+    liability. So you have to be very rich before this insurance stops making sense.
+    In the US at least you can certainly buy car insurance that doesn''t cover loss
+    of the car, or that has a high deductible. And in fact, if you can afford to self-insure
+    up to a high deductible, on average as you say that should be a good idea. Same
+    is true of most kinds of insurance, a high deductible is best as long as you can
+    afford it, unless you know you''ll probably file a claim. (Health insurance in
+    particular is weird in many ways, and one is that you often can estimate whether
+    you''ll have claims.) On our auto policy, the liability and uninsured motorist
+    coverage is about 60% of the cost while damage to the car coverage is 40%. I''m
+    sure this varies a lot depending on the value of your cars and how much you drive
+    and driving record, etc. On an aging car the coverage for the car itself should
+    get cheaper and cheaper since the car is worth less, while liability coverage
+    would not necessarily get cheaper.'
+  - ' "Other individuals answered how owning an REIT compares to an individual real
+    estate investment, but did not answer your second question as readily, ""are REITs
+    a good option to generate passive income for awhile?"". The ""awhile"" part is
+    quite important in answering this question. If your intentions are to invest for
+    a relatively short time period (say, 7 years or less), it may be especially advantageous
+    to invest in a REIT. The foremost advantage comes from significantly lower transaction
+    fees (stock/ETF trades are practically/potentially free today) compared to purchasing
+    real estate, which involves inspection+titling fees/taxes/broker fees, which in
+    a round-trip transaction (purchase and sale) would come to ~10%. The secondary
+    advantage to owning a REIT is they are much more liquid than a property. If you
+    wanted to sell your investment at a given point in time, you can easily log into
+    your brokerage and execute your transaction, while liquidating an investment property
+    will take time on market/potentially tossing tenants/fixing up place, etc. On
+    the other hand, illiquid investments have generally yielded higher historical
+    returns according to past research."'
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
-metrics:
-- cosine_accuracy@1
-- cosine_accuracy@3
-- cosine_accuracy@5
-- cosine_accuracy@10
-- cosine_precision@1
-- cosine_precision@3
-- cosine_precision@5
-- cosine_precision@10
-- cosine_recall@1
-- cosine_recall@3
-- cosine_recall@5
-- cosine_recall@10
-- cosine_ndcg@10
-- cosine_mrr@10
-- cosine_map@100
-model-index:
-- name: SentenceTransformer based on google-bert/bert-base-uncased
-  results:
-  - task:
-      type: information-retrieval
-      name: Information Retrieval
-    dataset:
-      name: dev
-      type: dev
-    metrics:
-    - type: cosine_accuracy@1
-      value: 0.094
-      name: Cosine Accuracy@1
-    - type: cosine_accuracy@3
-      value: 0.16
-      name: Cosine Accuracy@3
-    - type: cosine_accuracy@5
-      value: 0.21
-      name: Cosine Accuracy@5
-    - type: cosine_accuracy@10
-      value: 0.28
-      name: Cosine Accuracy@10
-    - type: cosine_precision@1
-      value: 0.094
-      name: Cosine Precision@1
-    - type: cosine_precision@3
-      value: 0.064
-      name: Cosine Precision@3
-    - type: cosine_precision@5
-      value: 0.05240000000000001
-      name: Cosine Precision@5
-    - type: cosine_precision@10
-      value: 0.0376
-      name: Cosine Precision@10
-    - type: cosine_recall@1
-      value: 0.05077546897546897
-      name: Cosine Recall@1
-    - type: cosine_recall@3
-      value: 0.08973903318903319
-      name: Cosine Recall@3
-    - type: cosine_recall@5
-      value: 0.12292792207792208
-      name: Cosine Recall@5
-    - type: cosine_recall@10
-      value: 0.16203593073593073
-      name: Cosine Recall@10
-    - type: cosine_ndcg@10
-      value: 0.12086099512256568
-      name: Cosine Ndcg@10
-    - type: cosine_mrr@10
-      value: 0.1437253968253969
-      name: Cosine Mrr@10
-    - type: cosine_map@100
-      value: 0.09737821041918299
-      name: Cosine Map@100
 ---
 
-# SentenceTransformer based on google-bert/bert-base-uncased
+# SentenceTransformer
 
-This is a [sentence-transformers](https://www.SBERT.net) model finetuned from [google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased). It maps sentences & paragraphs to a 768-dimensional dense vector space and can be used for semantic textual similarity, semantic search, paraphrase mining, text classification, clustering, and more.
+This is a [sentence-transformers](https://www.SBERT.net) model trained. It maps sentences & paragraphs to a 768-dimensional dense vector space and can be used for semantic textual similarity, semantic search, paraphrase mining, text classification, clustering, and more.
 
 ## Model Details
 
 ### Model Description
 - **Model Type:** Sentence Transformer
-- **Base model:** [google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased) <!-- at revision 86b5e0934494bd15c9632b12f734a8a67f723594 -->
+<!-- - **Base model:** [Unknown](https://huggingface.co/unknown) -->
 - **Maximum Sequence Length:** 350 tokens
 - **Output Dimensionality:** 768 dimensions
 - **Similarity Function:** Cosine Similarity
@@ -306,9 +288,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'Tenant wants to pay rent with EFT',
-    ' "How can someone use the account number to withdraw money without my   consent? They can use your account number to game your banks phone support and try to phish their way into your account. Banks have gotten very good at combating this, but theoretically with just the address he lives in, your name, and a bad bank phone rep, he could get into your business. The account number would just be one more piece of information to lead with. I have 1 savings and 3 checking accounts with the same bank. Would they be able to gain access to the other accounts? Dependent on how incompetent the bad bank rep I referenced above is, sure. But the odds are incredibly low, and if anything were to happen, the bank would be falling over itself to fix it and make reparations so that you don\'t sue for a whole crap ton more. Is there a more secure and still free option that I have overlooked? Opening up yet another checking account solely for accounts receivable and transfer to accounts payable would keep your financial records more transparent. Also, banks are doing ""money transfer by email"" now, so I don\'t know how great that is for business transactions, but in that instance you\'re just giving out an email linked to a money receiving account instead of an actual account number. Paypal is also a pretty good EFT middleman, but their business practices have become shady in the past 5 years."',
-    " You won't be using my SQL. It probably lists Oracle because that's the ERP system the company uses, and it'd be good for the FP&amp;A guy to be familiar with the system. Be an expert in Excel, you will probably be using it the majority of your workday.",
+    'Why do people buy insurance even if they have the means to overcome the loss?',
+    " Your basic point is correct; the savvy move is to use insurance only to cover losses that would be painful or catastrophic for you. Otherwise, self-insure. In the specific example of car insurance, you may be missing that it doesn't only cover replacement of the car, it also covers liability, which is a hundreds-of-thousands-of-dollars risk. The liability coverage may well be legally required; it may also be required as a base layer if you want to get a separate umbrella policy up to millions in liability. So you have to be very rich before this insurance stops making sense. In the US at least you can certainly buy car insurance that doesn't cover loss of the car, or that has a high deductible. And in fact, if you can afford to self-insure up to a high deductible, on average as you say that should be a good idea. Same is true of most kinds of insurance, a high deductible is best as long as you can afford it, unless you know you'll probably file a claim. (Health insurance in particular is weird in many ways, and one is that you often can estimate whether you'll have claims.) On our auto policy, the liability and uninsured motorist coverage is about 60% of the cost while damage to the car coverage is 40%. I'm sure this varies a lot depending on the value of your cars and how much you drive and driving record, etc. On an aging car the coverage for the car itself should get cheaper and cheaper since the car is worth less, while liability coverage would not necessarily get cheaper.",
+    " If you have been putting savings away for the longer term and have some extra funds which you would like to take some extra risk on - then I say work yourself out a strategy/plan, get yourself educated and go for it. If it is individual shares you are interested then work out if you prefer to use fundamental analysis, technical analysis or some of both. You can use fundamental analysis to help determine which shares to buy, and then use technical analysis to help determine when to get into and out of a position. You say you are prepared to lose $10,000 in order to try to get higher returns. I don't know what percentage this $10,000 is of the capital you intend to use in this kind of investments/trading, but lets assume it is 10% - so your total starting capital would be $100,000. The idea now would be to learn about money management, position sizing and risk management. There are plenty of good books on these subjects. If you set a maximum loss for each position you open of 1% of your capital - i.e $1,000, then you would have to get 10 straight losses in a row to get to your 10% total loss. You do this by setting stop losses on your positions. I'll use an example to explain: Say you are looking at a stock priced at $20 and you get a signal to buy it at that price. You now need to determine a stop price which if the stock goes down to, you can say well I may have been wrong on this occasion, the stock price has gone against me so I need to get out now (I put automatic stop loss conditional orders with my broker). You may determine the stop price based on previous support levels, using a percentage of your buy price or another indicator or method. I tend to use the percentage of buy price - lets say you use 10% - so your stop price would be at $18 (10% below your buy price of $20). So now you can work out your position size (the number of shares to buy). Your maximum loss on the position is $2 per share or 10% of your position in this stock, but it should also be only 1% of your total capital - being 1% of $100,000 = $1,000. You simply divide $1,000 by $2 to get 500 shares to buy.  You then do this with the rest of your positions - with a $100,000 starting capital using a 1% maximum loss per position and a stop loss of 10% you will end up with a maximum of 10 positions. If you use a larger maximum loss per position your position sizes would increase and you would have less positions to open (I would not go higher than 2% maximum loss per position). If you use a larger stop loss percentage then your position sizes would decrease and you would have more positions to open. The larger the stop loss the longer you will potentially be in a position and the smaller the stop loss generally the less time you will be in a position. Also as your total capital increases so will your 1% of total capital, just as it would decrease if your total capital decreases. Using this method you can aim for higher risk/ higher return investments and reduce and manage your risk to a desired level. One other thing to consider, don't let tax determine when you sell an investment. If you are keeping a stock just so you will pay less tax if kept for over 12 months - then you are in real danger of increasing your risk considerably. I would rather pay 50% tax on a 30% return than 25% tax on a 15% return.",
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -317,9 +299,9 @@ print(embeddings.shape)
 # Get the similarity scores for the embeddings
 similarities = model.similarity(embeddings, embeddings)
 print(similarities)
-# tensor([[1.0000, 0.5366, 0.3250],
-#         [0.5366, 1.0000, 0.3792],
-#         [0.3250, 0.3792, 1.0000]])
+# tensor([[ 1.0000,  0.9268, -0.0167],
+#         [ 0.9268,  1.0000,  0.0124],
+#         [-0.0167,  0.0124,  1.0000]])
 ```
 
 <!--
@@ -345,33 +327,6 @@ You can finetune this model on your own dataset.
 
 *List how the model may foreseeably be misused and address what users ought not to do with the model.*
 -->
-
-## Evaluation
-
-### Metrics
-
-#### Information Retrieval
-
-* Dataset: `dev`
-* Evaluated with [<code>InformationRetrievalEvaluator</code>](https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html#sentence_transformers.evaluation.InformationRetrievalEvaluator)
-
-| Metric              | Value      |
-|:--------------------|:-----------|
-| cosine_accuracy@1   | 0.094      |
-| cosine_accuracy@3   | 0.16       |
-| cosine_accuracy@5   | 0.21       |
-| cosine_accuracy@10  | 0.28       |
-| cosine_precision@1  | 0.094      |
-| cosine_precision@3  | 0.064      |
-| cosine_precision@5  | 0.0524     |
-| cosine_precision@10 | 0.0376     |
-| cosine_recall@1     | 0.0508     |
-| cosine_recall@3     | 0.0897     |
-| cosine_recall@5     | 0.1229     |
-| cosine_recall@10    | 0.162      |
-| **cosine_ndcg@10**  | **0.1209** |
-| cosine_mrr@10       | 0.1437     |
-| cosine_map@100      | 0.0974     |
 
 <!--
 ## Bias, Risks and Limitations
@@ -399,11 +354,11 @@ You can finetune this model on your own dataset.
   | type    | string                                                                            | string                                                                              | int                          |
   | details | <ul><li>min: 3 tokens</li><li>mean: 15.61 tokens</li><li>max: 80 tokens</li></ul> | <ul><li>min: 2 tokens</li><li>mean: 180.23 tokens</li><li>max: 350 tokens</li></ul> | <ul><li>1: 100.00%</li></ul> |
 * Samples:
-  | sentence_0                                                                                                                                            | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | label          |
-  |:------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
-  | <code>For the first time in my life, I'm going to be making real money…what should I do with it?</code>                                               | <code> "Fool's 13 steps to invest is a good starting point. Specifically, IFF all your credit cards are paid, and you made sure you've got no outstanding liabilities (that also accrues interest), stock indexes might be a good place for 5-10 years timeframes. For grad school, I'd probably look into cash ISA (or local equivalent thereof) -the rate of return is going to be lower, but having it in a separate account at least makes it mentally ""out of sight - out of mind"", so you can make sure the money's there WHEN you need it."</code>                                                                                                                                                                                                                                                                                                                                                                | <code>1</code> |
-  | <code>Benefits of Purchasing Company Stock at a Discount</code>                                                                                       | <code> Typically, the discount is taxable at sale time But what about taxes?  When the company   buys the shares for you, you do not   owe any taxes. You are exercising your   rights under the ESPP. You have bought   some stock. So far so good. When you sell the stock, the discount   that you received when you bought the   stock is generally considered   additional compensation to you, so you   have to pay taxes on it as regular   income. Source: Turbotax.   Second source. Your pretax rate of return would be: 17% (100/85) In your scenario where the stock price is fixed at $100. Your tax rate would be your marginal rate.   If the stock stayed at 100, you would still be taxed as income on $15/share (the discount) and would receive no benefit for holding the stock one year. Assuming you are in the 25% tax bracket, your after tax rate of return would be 13% ((15*.75)+85)/85)</code> | <code>1</code> |
-  | <code>I don't want to deal with weird yoga ladies with hairy arms and an entire obese family in shoppers I'm gonna end up going somewhere else</code> | <code> I don't want to deal with Walmart shoppers which is why I pay a premium to buy shit at Wholefoods.  If I have to deal with weird yoga ladies with hairy armpits *and* an entire obese family in scooters, I'm gonna end up going somewhere else.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | <code>1</code> |
+  | sentence_0                                                                                            | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | label          |
+  |:------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
+  | <code>What's a reliable way for a non-permanent resident alien in the USA to get an auto loan?</code> | <code> I don't think that they ask you for your citizenship status when you apply in a dealership. At least I don't remember being asked. I know of at least 3 people from my closest circle of friends who are in various immigration statuses (including one on F1) and got an auto loan from a dealership without a problem and with good rates. They have to ask for your immigration status on online applications because of the post-9/11 law changes. Edit to allow Dilip to retract his unjustified downvote: Chase and Wells Fargo have a reliable track of extending auto loans to non-permanent residents.</code>                                                                                                                                                                                 | <code>1</code> |
+  | <code>When a stock price goes down, does the money just disappears into thin air?</code>              | <code> Yes and no. There is no actual money involved - just assumed value. Imagine you own a picture that you painted yourself, and all your friends agree it is worth 1000 $. You feel like you have a 1000 $-picture. Now a guy with some more knowledge visits you, and tells you that it is really only worth about a 100 $. Did you just lose 900 $? If yes, where did the money go?</code>                                                                                                                                                                                                                                                                                                                                                                                                              | <code>1</code> |
+  | <code>Getting (historical) Standard & Poor Stock Guides</code>                                        | <code> I haven't seen one of these in quite some time. Back in the 1970s, maybe the 1980s, stock brokers would occasionally send their retail clients a complimentary copy once in a while. Also, I remember the local newspaper would offer a year-end edition for a few dollars (maybe $3) and that edition would include the newspaper company's name on the cover. They were very handy little guides measuring 5 1/2 x 8 (horizontal) with one line devoted to each company. They listed hundreds of publicly traded companies and had basic info on each company. As you stated, for further info you needed to go to the library and follow-up with the big S&P and/or Moody's manuals. That was long before the internet made such info available at the click of a button on a home computer!</code> | <code>1</code> |
 * Loss: [<code>MultipleNegativesRankingLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#multiplenegativesrankingloss) with these parameters:
   ```json
   {
@@ -418,7 +373,7 @@ You can finetune this model on your own dataset.
 
 - `per_device_train_batch_size`: 16
 - `per_device_eval_batch_size`: 16
-- `num_train_epochs`: 2
+- `num_train_epochs`: 100
 - `fp16`: True
 - `multi_dataset_batch_sampler`: round_robin
 
@@ -442,7 +397,7 @@ You can finetune this model on your own dataset.
 - `adam_beta2`: 0.999
 - `adam_epsilon`: 1e-08
 - `max_grad_norm`: 1
-- `num_train_epochs`: 2
+- `num_train_epochs`: 100
 - `max_steps`: -1
 - `lr_scheduler_type`: linear
 - `lr_scheduler_kwargs`: {}
@@ -548,10 +503,16 @@ You can finetune this model on your own dataset.
 </details>
 
 ### Training Logs
-| Epoch | Step | dev_cosine_ndcg@10 |
-|:-----:|:----:|:------------------:|
-| 1.0   | 41   | 0.1162             |
-| 2.0   | 82   | 0.1209             |
+| Epoch   | Step | Training Loss |
+|:-------:|:----:|:-------------:|
+| 12.1951 | 500  | 0.5404        |
+| 24.3902 | 1000 | 0.0932        |
+| 36.5854 | 1500 | 0.085         |
+| 48.7805 | 2000 | 0.0755        |
+| 60.9756 | 2500 | 0.0749        |
+| 73.1707 | 3000 | 0.0687        |
+| 85.3659 | 3500 | 0.062         |
+| 97.5610 | 4000 | 0.0633        |
 
 
 ### Framework Versions

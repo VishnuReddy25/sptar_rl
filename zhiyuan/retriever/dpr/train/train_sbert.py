@@ -1,124 +1,266 @@
-'''
-This examples show how to train a basic Bi-Encoder for any BEIR dataset without any mined hard negatives or triplets.
+# '''
+# This examples show how to train a basic Bi-Encoder for any BEIR dataset without any mined hard negatives or triplets.
 
-The queries and passages are passed independently to the transformer network to produce fixed sized embeddings.
-These embeddings can then be compared using cosine-similarity to find matching passages for a given query.
+# The queries and passages are passed independently to the transformer network to produce fixed sized embeddings.
+# These embeddings can then be compared using cosine-similarity to find matching passages for a given query.
 
-For training, we use MultipleNegativesRankingLoss. There, we pass pairs in the format:
-(query, positive_passage). Other positive passages within a single batch becomes negatives given the pos passage.
+# For training, we use MultipleNegativesRankingLoss. There, we pass pairs in the format:
+# (query, positive_passage). Other positive passages within a single batch becomes negatives given the pos passage.
 
-We do not mine hard negatives or train triplets in this example.
+# We do not mine hard negatives or train triplets in this example.
 
-Running this script:
-python train_sbert.py
-'''
+# Running this script:
+# python train_sbert.py
+# '''
 
+# import torch
+# from sentence_transformers import losses, models, SentenceTransformer
+# from beir import util, LoggingHandler
+# from beir.datasets.data_loader import GenericDataLoader
+# from beir.retrieval.train import TrainRetriever
+# import pathlib, os
+# import logging
+# import argparse
+# from os.path import join, dirname, abspath
+# import math
+# import sys
+# ####
+# print("Started",flush=True)
+# print("Started without flush")
+
+# zhiyuan_path = dirname(dirname(dirname(dirname(abspath(__file__)))))
+# if zhiyuan_path not in sys.path:
+#     sys.path.append(zhiyuan_path)
+
+# from weak_data_loader import WeakDataLoader
+
+# data_dir = join(zhiyuan_path, "datasets")
+# raw_dir = join(data_dir, "raw")
+# weak_dir = join(data_dir, "weak")
+# beir_dir = join(raw_dir, "beir")
+# xuyang_dir = join(dirname(zhiyuan_path), "xuyang", "data")
+
+# #### Download nfcorpus.zip dataset and unzip the dataset
+
+# parser = argparse.ArgumentParser()
+# parser.add_argument('--dataset_name', required=False, default="msmarco", type=str)
+# parser.add_argument('--num_epochs', required=False, default=2, type=int)
+# parser.add_argument('--train_num', required=False, default=50, type=int)
+# parser.add_argument('--weak_num', required=False, default="5000", type=str)
+# parser.add_argument('--product', required=False, default="cosine", type=str)
+# parser.add_argument('--exp_name', required=False, default="no_aug", type=str)
+# args = parser.parse_args()
+# #### Provide model save path
+# model_name = "bert-base-uncased" 
+# model_save_path = os.path.join(pathlib.Path(__file__).parent.absolute(), "output", args.exp_name, str(args.train_num), "{}-v1-{}".format(model_name, args.dataset_name))
+# os.makedirs(model_save_path, exist_ok=True)
+# #### Just some code to print debug information to stdout
+# fh = logging.FileHandler(join(model_save_path, "log.txt"))
+# ch = logging.StreamHandler(sys.stdout)
+# logging.basicConfig(format='%(asctime)s - %(message)s',
+#                     datefmt='%Y-%m-%d %H:%M:%S',
+#                     level=logging.INFO,
+#                     handlers=[fh, ch])
+# #### /print debug information to stdout
+# #### Provide the data_path where nfcorpus has been downloaded and unzipped
+# if args.exp_name == "no_aug":
+#     corpus, queries, qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv")).load_custom()
+# else:
+#     # add support for loading weak data and ori train as new train
+#     weak_query_file = join(xuyang_dir, "fiqa_50", "500", "weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl")
+#     weak_qrels_file = join(xuyang_dir, "fiqa_50", "500", "weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv")
+#     corpus, queries, qrels = WeakDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv"), weak_query_file=weak_query_file, weak_qrels_file=weak_qrels_file).load_weak_custom()
+# #### Please Note not all datasets contain a dev split, comment out the line if such the case
+# dev_corpus, dev_queries, dev_qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(beir_dir, args.dataset_name, "qrels", "dev.tsv")).load_custom()
+
+# #### Provide any sentence-transformers or HF model
+# word_embedding_model = models.Transformer(model_name, max_seq_length=350)
+# pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
+# device = "cuda" if torch.cuda.is_available() else "cpu"
+# model = SentenceTransformer(modules=[word_embedding_model, pooling_model], device=device)
+
+# #### Or provide pretrained sentence-transformer model
+# # model = SentenceTransformer("msmarco-distilbert-base-v3")
+# print(device)
+# retriever = TrainRetriever(model=model, batch_size=16)
+
+# #### Prepare training samples
+# train_samples = retriever.load_train(corpus, queries, qrels)
+# train_dataloader = retriever.prepare_train(train_samples, shuffle=True)
+
+# #### Training SBERT with cosine-product
+# if args.product == "cosine":
+#     train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model)
+#     score_functions = {'cos_sim': util.cos_sim}
+# #### training SBERT with dot-product
+# elif args.product == "dot":
+#     train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model, similarity_fct=util.dot_score)
+#     score_functions = {'dot_score': util.dot_score}
+# #### Prepare dev evaluator
+# corpus_chunk_size=100000
+# print("IR evaluation without flush")
+# print("IR evaluation",flush=True)
+# ir_evaluator = retriever.load_ir_evaluator(dev_corpus, dev_queries, dev_qrels, name="dev")
+
+# #### If no dev set is present from above use dummy evaluator
+# # ir_evaluator = retriever.load_dummy_evaluator()
+
+# #### Configure Train params
+# num_epochs = args.num_epochs
+# # evaluation_steps = math.ceil(len(train_samples)/retriever.batch_size)
+# # set -1 to evaluate after each epoch
+# evaluation_steps = 0
+# warmup_steps = int(len(train_samples) * num_epochs / retriever.batch_size * 0.1)
+
+# print(">>> Starting training now...", flush=True)
+# retriever.fit(train_objectives=[(train_dataloader, train_loss)], 
+#                 # evaluator=ir_evaluator, 
+#                 epochs=num_epochs,
+#                 output_path=model_save_path,
+#                 warmup_steps=warmup_steps,
+#                 evaluation_steps=evaluation_steps,
+#                 use_amp=True,
+#                 callback=lambda score, epoch, steps: print(f"[Epoch {epoch} | Step {steps}] Eval score: {score}", flush=True)
+# )
+
+"""
+Bi-Encoder Training Script with In-Batch Hard Negatives
+"""
+
+import os, sys, pathlib, logging, argparse, math
 import torch
-from sentence_transformers import losses, models, SentenceTransformer
-from beir import util, LoggingHandler
+from sentence_transformers import SentenceTransformer, models, losses
+from beir import util
 from beir.datasets.data_loader import GenericDataLoader
 from beir.retrieval.train import TrainRetriever
-import pathlib, os
-import logging
-import argparse
-from os.path import join, dirname, abspath
-import math
-import sys
-####
-print("Started",flush=True)
-print("Started without flush")
 
-zhiyuan_path = dirname(dirname(dirname(dirname(abspath(__file__)))))
+# Optional weak data loader
+zhiyuan_path = pathlib.Path(__file__).resolve().parents[3]
 if zhiyuan_path not in sys.path:
-    sys.path.append(zhiyuan_path)
-
+    sys.path.append(str(zhiyuan_path))
 from weak_data_loader import WeakDataLoader
 
-data_dir = join(zhiyuan_path, "datasets")
-raw_dir = join(data_dir, "raw")
-weak_dir = join(data_dir, "weak")
-beir_dir = join(raw_dir, "beir")
-xuyang_dir = join(dirname(zhiyuan_path), "xuyang", "data")
-
-#### Download nfcorpus.zip dataset and unzip the dataset
-
+# --------------------------
+# Argument parsing
+# --------------------------
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', required=False, default="msmarco", type=str)
-parser.add_argument('--num_epochs', required=False, default=2, type=int)
-parser.add_argument('--train_num', required=False, default=50, type=int)
-parser.add_argument('--weak_num', required=False, default="5000", type=str)
-parser.add_argument('--product', required=False, default="cosine", type=str)
-parser.add_argument('--exp_name', required=False, default="no_aug", type=str)
+parser.add_argument('--dataset_name', type=str, default='msmarco')
+parser.add_argument('--num_epochs', type=int, default=2)
+parser.add_argument('--train_num', type=int, default=50)
+parser.add_argument('--weak_num', type=int, default=5000)
+parser.add_argument('--product', type=str, default='cosine', choices=['cosine','dot'])
+parser.add_argument('--exp_name', type=str, default='fiqa')
+parser.add_argument('--loss_type', type=str, default='listwise', choices=['listwise','pairwise','hard'])
 args = parser.parse_args()
-#### Provide model save path
-model_name = "bert-base-uncased" 
-model_save_path = os.path.join(pathlib.Path(__file__).parent.absolute(), "output", args.exp_name, str(args.train_num), "{}-v1-{}".format(model_name, args.dataset_name))
-os.makedirs(model_save_path, exist_ok=True)
-#### Just some code to print debug information to stdout
-fh = logging.FileHandler(join(model_save_path, "log.txt"))
-ch = logging.StreamHandler(sys.stdout)
-logging.basicConfig(format='%(asctime)s - %(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S',
-                    level=logging.INFO,
-                    handlers=[fh, ch])
-#### /print debug information to stdout
-#### Provide the data_path where nfcorpus has been downloaded and unzipped
-if args.exp_name == "no_aug":
-    corpus, queries, qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv")).load_custom()
-else:
-    # add support for loading weak data and ori train as new train
-    weak_query_file = join(xuyang_dir, "fiqa_50", "500", "weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl")
-    weak_qrels_file = join(xuyang_dir, "fiqa_50", "500", "weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv")
-    corpus, queries, qrels = WeakDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(xuyang_dir, f"{args.dataset_name}_{args.train_num}", f"prompt_tuning_{args.train_num}.tsv"), weak_query_file=weak_query_file, weak_qrels_file=weak_qrels_file).load_weak_custom()
-#### Please Note not all datasets contain a dev split, comment out the line if such the case
-dev_corpus, dev_queries, dev_qrels = GenericDataLoader(corpus_file=join(beir_dir, args.dataset_name, "corpus_100k_reduced_ratio_20.jsonl"), query_file=join(beir_dir, args.dataset_name, "queries.jsonl"), qrels_file=join(beir_dir, args.dataset_name, "qrels", "dev.tsv")).load_custom()
 
-#### Provide any sentence-transformers or HF model
+# --------------------------
+# Setup paths and logging
+# --------------------------
+data_dir = zhiyuan_path / "datasets"
+raw_dir = data_dir / "raw"
+beir_dir = raw_dir / "beir"
+xuyang_dir = zhiyuan_path.parent / "xuyang" / "data"
+
+model_name = "bert-base-uncased"
+model_save_path = pathlib.Path(__file__).parent / "output" / args.exp_name / str(args.train_num) / f"{model_name}-v1-{args.dataset_name}"
+os.makedirs(model_save_path, exist_ok=True)
+
+# Logging
+fh = logging.FileHandler(model_save_path / "log.txt")
+ch = logging.StreamHandler(sys.stdout)
+logging.basicConfig(
+    format='%(asctime)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    level=logging.INFO,
+    handlers=[fh, ch]
+)
+logging.info(f"Starting training for dataset: {args.dataset_name}")
+logging.info(f"Using device: {'cuda' if torch.cuda.is_available() else 'cpu'}")
+
+# --------------------------
+# Load corpus, queries, qrels
+# --------------------------
+if args.exp_name == "no_aug":
+    corpus, queries, qrels = GenericDataLoader(
+        corpus_file=str(beir_dir / args.dataset_name / f"corpus_{args.weak_num}_reduced_ratio_20.jsonl"),
+        query_file=str(beir_dir / args.dataset_name / "queries.jsonl"),
+        qrels_file=str(xuyang_dir / f"{args.dataset_name}_{args.train_num}" / f"prompt_tuning_{args.train_num}.tsv")
+    ).load_custom()
+else:
+    weak_query_file = xuyang_dir / "fiqa_50" / "500" / "weak_queries_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.jsonl"
+    weak_qrels_file = xuyang_dir / "fiqa_50" / "500" / "weak_train_500_llama_7b_500_fixed_v3_best_llama_prompt_2_filtered_70_filtered_50.tsv"
+
+    corpus, queries, qrels = WeakDataLoader(
+        corpus_file=str(beir_dir / args.dataset_name / "corpus_100k_reduced_ratio_20.jsonl"),
+        query_file=str(beir_dir / args.dataset_name / "queries.jsonl"),
+        qrels_file=str(xuyang_dir / f"{args.dataset_name}_{args.train_num}" / f"prompt_tuning_{args.train_num}.tsv"),
+        weak_query_file=str(weak_query_file),
+        weak_qrels_file=str(weak_qrels_file)
+    ).load_weak_custom()
+
+# Dev set
+dev_corpus, dev_queries, dev_qrels = GenericDataLoader(
+    corpus_file=str(beir_dir / args.dataset_name / "corpus_100k_reduced_ratio_20.jsonl"),
+    query_file=str(beir_dir / args.dataset_name / "queries.jsonl"),
+    qrels_file=str(beir_dir / args.dataset_name / "qrels/dev.tsv")
+).load_custom()
+
+# --------------------------
+# Model setup
+# --------------------------
 word_embedding_model = models.Transformer(model_name, max_seq_length=350)
 pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = SentenceTransformer(modules=[word_embedding_model, pooling_model], device=device)
 
-#### Or provide pretrained sentence-transformer model
-# model = SentenceTransformer("msmarco-distilbert-base-v3")
-print(device)
 retriever = TrainRetriever(model=model, batch_size=16)
 
-#### Prepare training samples
+# --------------------------
+# Prepare training data
+# --------------------------
 train_samples = retriever.load_train(corpus, queries, qrels)
 train_dataloader = retriever.prepare_train(train_samples, shuffle=True)
 
-#### Training SBERT with cosine-product
-if args.product == "cosine":
-    train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model)
-    score_functions = {'cos_sim': util.cos_sim}
-#### training SBERT with dot-product
-elif args.product == "dot":
-    train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model, similarity_fct=util.dot_score)
-    score_functions = {'dot_score': util.dot_score}
-#### Prepare dev evaluator
-corpus_chunk_size=100000
-print("IR evaluation without flush")
-print("IR evaluation",flush=True)
+# --------------------------
+# Choose loss
+# --------------------------
+if args.loss_type == "listwise":
+    if args.product == "cosine":
+        train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model)
+    else:
+        from sentence_transformers import util
+        train_loss = losses.MultipleNegativesRankingLoss(model=retriever.model, similarity_fct=util.dot_score)
+elif args.loss_type == "pairwise":
+    from sentence_transformers.losses import CosineSimilarityLoss
+    train_loss = CosineSimilarityLoss(model=retriever.model)
+elif args.loss_type == "hard":
+    from sentence_transformers.losses import BatchHardTripletLoss, TripletDistanceMetric
+    train_loss = BatchHardTripletLoss(
+        model=retriever.model,
+        distance_metric=TripletDistanceMetric.COSINE,
+        margin=0.2
+    )
+
+# --------------------------
+# Evaluation setup
+# --------------------------
 ir_evaluator = retriever.load_ir_evaluator(dev_corpus, dev_queries, dev_qrels, name="dev")
-
-#### If no dev set is present from above use dummy evaluator
-# ir_evaluator = retriever.load_dummy_evaluator()
-
-#### Configure Train params
+evaluation_steps = 0  # evaluate after each epoch
 num_epochs = args.num_epochs
-# evaluation_steps = math.ceil(len(train_samples)/retriever.batch_size)
-# set -1 to evaluate after each epoch
-evaluation_steps = 0
 warmup_steps = int(len(train_samples) * num_epochs / retriever.batch_size * 0.1)
 
-print(">>> Starting training now...", flush=True)
-retriever.fit(train_objectives=[(train_dataloader, train_loss)], 
-                evaluator=ir_evaluator, 
-                epochs=num_epochs,
-                output_path=model_save_path,
-                warmup_steps=warmup_steps,
-                evaluation_steps=evaluation_steps,
-                use_amp=True,
-                callback=lambda score, epoch, steps: print(f"[Epoch {epoch} | Step {steps}] Eval score: {score}", flush=True)
+# --------------------------
+# Start training
+# --------------------------
+logging.info(">>> Starting training now...")
+retriever.fit(
+    train_objectives=[(train_dataloader, train_loss)],
+    epochs=num_epochs,
+    output_path=model_save_path,
+    warmup_steps=warmup_steps,
+    evaluation_steps=evaluation_steps,
+    use_amp=True,
+    callback=lambda score, epoch, steps: logging.info(f"[Epoch {epoch} | Step {steps}] Eval score: {score}")
 )
+
+logging.info(">>> Training complete. Model saved at: " + str(model_save_path))
