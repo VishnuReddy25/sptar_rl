@@ -38,6 +38,8 @@ class RLPromptOptimizer:
         
         # Reward history for logging
         self.reward_history = []
+        self.reward_momentum = 0.0
+        self.momentum_beta = 0.9
         
         self.logger = logging.getLogger(__name__)
     
@@ -63,13 +65,22 @@ class RLPromptOptimizer:
         
         # Store reward for logging
         self.reward_history.append(combined_reward)
-        
-        # Simple policy gradient update (simplified version)
-        # In practice, this would involve computing gradients through the entire pipeline
-        
-        # For now, add some noise to simulate learning
-        noise = torch.randn_like(self.prompt_params) * 0.01
-        self.prompt_params.data += noise
+
+        # Maintain a smoothed reward baseline for more stable updates
+        if len(self.reward_history) == 1:
+            centered_reward = combined_reward
+            self.reward_momentum = combined_reward
+        else:
+            self.reward_momentum = self.momentum_beta * self.reward_momentum + (1 - self.momentum_beta) * combined_reward
+            centered_reward = combined_reward - self.reward_momentum
+
+        # Surrogate policy-gradient-style update using reward-scaled parameter motion.
+        # This is still simplified, but now deterministic and reward-aware.
+        self.optimizer.zero_grad()
+        surrogate_loss = -(centered_reward * torch.mean(self.prompt_params ** 2))
+        surrogate_loss.backward()
+        torch.nn.utils.clip_grad_norm_([self.prompt_params], max_norm=1.0)
+        self.optimizer.step()
         
         # Create updated prompts (simplified)
         updated_prompts = {}
@@ -78,7 +89,8 @@ class RLPromptOptimizer:
                 **prompt_data,
                 'reward_score': combined_reward,
                 'iteration': self.current_iteration,
-                'embedding_norm': torch.norm(self.prompt_params[i]).item()
+                'embedding_norm': torch.norm(self.prompt_params[i]).item(),
+                'centered_reward': centered_reward
             }
         
         self.current_iteration += 1
