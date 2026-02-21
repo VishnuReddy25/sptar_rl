@@ -25,6 +25,7 @@ class RetrievalEvaluator:
     """Advanced retrieval evaluator for RL feedback"""
     
     def __init__(self, model_path: str, dataset_name: str = "fiqa", corpus_size: int = 500):
+        self.logger = logging.getLogger(__name__)
         self.dataset_name = dataset_name
         self.corpus_size = corpus_size
         self.model_path = model_path
@@ -36,7 +37,7 @@ class RetrievalEvaluator:
         # Load data
         self._load_data()
         
-        self.logger = logging.getLogger(__name__)
+        
     
     def _load_data(self):
         """Load dataset based on configuration"""

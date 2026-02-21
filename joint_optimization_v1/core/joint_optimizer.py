@@ -136,6 +136,10 @@ class JointOptimizer:
         iteration_results = {
             'iteration': self.current_iteration,
             'reward': 0.0,
+            'baseline_reward': 0.0,
+            'post_training_reward': 0.0,
+            'prompt_reward_signal': 0.0,
+            'weak_query_quality': 0.0,
             'metrics': {},
             'model_path': None,
             'weak_queries_generated': 0,
@@ -143,25 +147,17 @@ class JointOptimizer:
         }
         
         try:
-            # Step 1: Evaluate current retriever
-            self.logger.info("Step 1: Evaluating current retriever")
-            metrics, reward = self.evaluator.evaluate_with_reward()
-            iteration_results['metrics'] = metrics
-            iteration_results['reward'] = reward
-            
-            # Step 2: Optimize prompts based on reward
-            self.logger.info("Step 2: Optimizing prompts")
-            optimized_prompts = self.prompt_optimizer.optimize_prompts(reward)
-            self.prompt_manager.update_prompts(optimized_prompts)
-            
-            # Save optimized prompts
-            prompt_path = self.config.output_dir / "prompts" / f"prompts_iteration_{self.current_iteration}.json"
-            self.prompt_optimizer.save_optimized_prompts(str(prompt_path), optimized_prompts)
-            
-            # Step 3: Generate weak queries with optimized prompts
-            self.logger.info("Step 3: Generating weak queries")
-            weak_queries = self.data_generator.generate_weak_queries(optimized_prompts)
+            # Step 1: Evaluate current retriever (baseline)
+            self.logger.info("Step 1: Evaluating current retriever (baseline)")
+            baseline_metrics, baseline_reward = self.evaluator.evaluate_with_reward()
+            iteration_results['baseline_reward'] = baseline_reward
+
+            # Step 2: Generate weak queries using current prompts
+            self.logger.info("Step 2: Generating weak queries")
+            current_prompts = self.prompt_optimizer.get_current_prompts()
+            weak_queries = self.data_generator.generate_weak_queries(current_prompts)
             filtered_queries, quality_score = self.data_generator.filter_and_score_queries(weak_queries)
+            iteration_results['weak_query_quality'] = quality_score
             
             # Save weak queries
             weak_query_path = self.config.output_dir / "weak_queries" / f"weak_queries_iteration_{self.current_iteration}.jsonl"
@@ -169,8 +165,8 @@ class JointOptimizer:
             
             iteration_results['weak_queries_generated'] = len(filtered_queries)
             
-            # Step 4: Prepare training data
-            self.logger.info("Step 4: Preparing training data")
+            # Step 3: Prepare training data
+            self.logger.info("Step 3: Preparing training data")
             training_data = self.training_manager.combine_training_data(filtered_queries)
             iteration_results['training_samples'] = len(training_data)
             
@@ -178,8 +174,8 @@ class JointOptimizer:
             train_data_path = self.config.output_dir / "training_data" / f"train_data_iteration_{self.current_iteration}.csv"
             self.training_manager.save_training_data(training_data, str(train_data_path))
             
-            # Step 5: Train DPR with RL feedback
-            self.logger.info("Step 5: Training DPR model")
+            # Step 4: Train DPR with RL feedback
+            self.logger.info("Step 4: Training DPR model")
             model_path = self.dpr_trainer.train_with_rl_feedback(
                 training_data=training_data,
                 num_epochs=self.config.num_epochs,
@@ -191,12 +187,41 @@ class JointOptimizer:
             saved_model_path = self.model_manager.save_iteration_model(model_path, self.current_iteration)
             iteration_results['model_path'] = saved_model_path
             
-            # Update evaluator with new model
+            # Update evaluator with new model and measure downstream retriever impact
             self.evaluator = RetrievalEvaluator(
                 model_path=saved_model_path,
                 dataset_name=self.config.dataset_name,
                 corpus_size=self.config.corpus_size
             )
+
+            # Step 5: Evaluate trained retriever and close loop to prompt optimizer
+            self.logger.info("Step 5: Evaluating trained retriever for prompt reward")
+            post_metrics, post_reward = self.evaluator.evaluate_with_reward()
+            prompt_reward_signal = post_reward - baseline_reward
+
+            iteration_results['metrics'] = {
+                'baseline': baseline_metrics,
+                'post_training': post_metrics
+            }
+            iteration_results['post_training_reward'] = post_reward
+            iteration_results['prompt_reward_signal'] = prompt_reward_signal
+            iteration_results['reward'] = post_reward
+
+            self.logger.info(
+                "Closing loop with prompt reward signal %.4f (post %.4f - baseline %.4f)",
+                prompt_reward_signal,
+                post_reward,
+                baseline_reward
+            )
+            optimized_prompts = self.prompt_optimizer.optimize_prompts(
+                retrieval_reward=prompt_reward_signal,
+                weak_query_quality=quality_score
+            )
+            self.prompt_manager.update_prompts(optimized_prompts)
+
+            # Save optimized prompts for the next iteration
+            prompt_path = self.config.output_dir / "prompts" / f"prompts_iteration_{self.current_iteration}.json"
+            self.prompt_optimizer.save_optimized_prompts(str(prompt_path), optimized_prompts)
             
             self.logger.info(f"Iteration {self.current_iteration} completed successfully")
             

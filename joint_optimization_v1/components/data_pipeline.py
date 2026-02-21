@@ -140,6 +140,7 @@ class TrainingDataManager:
     """Manages training data composition for DPR training"""
     
     def __init__(self, dataset_name: str = "fiqa"):
+        self.logger = logging.getLogger(__name__)
         self.dataset_name = dataset_name
         self.data_dir = Path(__file__).parent.parent.parent / "xuyang" / "data" / f"{dataset_name}_50"
         
