@@ -8,7 +8,7 @@ The framework alternates between:
 1. **Prompt Optimization**: Using RL to optimize soft prompts based on retrieval performance
 2. **Weak Query Generation**: Generating weak supervision data with optimized prompts
 3. **DPR Training**: Training dense retrievers with RL-enhanced loss functions
-4. **Evaluation**: Computing retrieval metrics to provide feedback for the next iteration
+4. **Post-Training Evaluation**: Measuring retriever gains and feeding the reward delta back to prompt optimization
 
 ## Architecture & Detailed File Descriptions
 
@@ -56,7 +56,7 @@ joint_optimization_v1/
   - `RewardTracker`: Monitors reward history and detects convergence
 - **Key Methods**:
   - `run_optimization()`: Main method that executes the alternating loop
-  - `_run_single_iteration()`: Executes one complete iteration of prompt→data→training→evaluation
+  - `_run_single_iteration()`: Executes one complete iteration of baseline eval→data generation→training→post-training eval→prompt update
   - `_save_results()`: Saves comprehensive results and summaries
 - **Functionality**: Manages iteration execution, convergence checking, exception handling, and result aggregation
 
@@ -229,12 +229,12 @@ This framework integrates with the existing SPTAR codebase:
 
 The optimization follows this cycle:
 
-1. **Evaluate** current retriever on test set
-2. **Compute** RL reward from retrieval metrics (NDCG, MAP, MRR)
-3. **Optimize** prompts using policy gradients based on reward
-4. **Generate** weak queries with optimized prompts
-5. **Train** DPR with RL-enhanced loss incorporating retrieval feedback
-6. **Repeat** until convergence or max iterations
+1. **Evaluate baseline** retriever on the test set.
+2. **Generate weak queries** with the current prompts and compute query quality.
+3. **Train DPR** with the generated weak supervision data.
+4. **Evaluate post-training** retriever and compute the reward delta (`post_reward - baseline_reward`).
+5. **Optimize prompts** using this downstream reward signal plus weak-query quality.
+6. **Repeat** until convergence or max iterations.
 
 ## Metrics and Rewards
 
