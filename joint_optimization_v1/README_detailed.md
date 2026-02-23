@@ -252,19 +252,6 @@ The RL reward is computed as a weighted combination:
 - Sentence Transformers
 - BEIR
 - Existing SPTAR dependencies
-
-## Example Results
-
-After running on FiQA with 500 documents:
-
-```
-Total Iterations: 5
-Best Reward: 0.7234
-Best Model: iteration_3
-Total Time: 1247.32 seconds
-Converged at iteration: 4
-```
-
 ## Troubleshooting
 
 ### Common Issues
@@ -282,9 +269,3 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 python -m joint_optimization_v1.run_joint_optimization --debug
 ```
 
-## Future Extensions
-
-- Multi-objective optimization (quality vs. diversity)
-- Curriculum learning for progressive corpus sizes
-- Meta-learning across different datasets
-- Integration with other retrievers (ColBERT, DPR variants)
