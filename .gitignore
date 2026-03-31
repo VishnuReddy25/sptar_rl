@@ -158,9 +158,10 @@ mlrunszhiyuan/datasets/
 zhiyuan/datasets/
 *.safetensors
 **/*.safetensors
-*.Zone.Identifier
-**/*Zone.Identifier
+*.Zone.Identifier
+**/*Zone.Identifier
 
 **/models/
 **/llm_models/
 
+*.safetensors
