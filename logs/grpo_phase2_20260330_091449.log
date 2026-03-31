@@ -1,0 +1,9 @@
+2026-03-30 09:14:49,288 [INFO] Device: cuda:0
+2026-03-30 09:14:50,038 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 09:14:50,085 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 09:14:50,103 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 09:14:50,103 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 09:14:50,103 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 09:14:50,103 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 09:14:50,103 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 09:14:50,103 [INFO] Base LLM: meta-llama/Llama-2-7b-hf

@@ -1,0 +1,146 @@
+2026-03-30 06:38:02,484 [INFO] Device: cuda:0
+2026-03-30 06:38:03,225 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 06:38:03,277 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 06:38:03,292 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 06:38:03,292 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 06:38:03,292 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 06:38:03,292 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 06:38:03,292 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 06:38:03,292 [INFO] Base LLM: meta-llama/Llama-2-7b-hf
+2026-03-30 06:38:24,919 [INFO] Base LLM loaded in 4-bit NF4
+2026-03-30 06:38:24,919 [INFO] Creating PEFT adapter: num_virtual_tokens=50, init_text='please generate query for this document'
+2026-03-30 06:38:25,560 [INFO] Loaded Phase 1 fiqa weights ((50, 4096)) into prompt_encoder.default.embedding.weight
+2026-03-30 06:38:25,563 [INFO] Trainable params: 204,800 (prompt encoder only)
+2026-03-30 06:38:26,136 [INFO] Reference encoder state snapshotted from Phase 1 weights
+2026-03-30 06:38:26,148 [INFO] PyTorch version 2.8.0 available.
+2026-03-30 06:38:26,313 [INFO] Load pretrained SentenceTransformer: zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-30 06:38:26,398 [INFO] DPR loaded from zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa (on CPU)
+2026-03-30 06:38:26,398 [INFO] Building DPR dense index ...
+2026-03-30 07:01:54,924 [INFO] DPR index shape: torch.Size([40528, 1024])
+2026-03-30 07:06:33,960 [INFO] Baseline NDCG@10 = 0.2938
+2026-03-30 07:06:33,963 [INFO] ============================================================
+2026-03-30 07:06:33,963 [INFO] Phase 2 GRPO loop starting
+2026-03-30 07:06:33,963 [INFO]   Full corpus:         40528 docs
+2026-03-30 07:06:33,963 [INFO]   Docs per epoch:      300 (random sample)
+2026-03-30 07:06:33,963 [INFO]   Group size G:        4
+2026-03-30 07:06:33,964 [INFO]   Docs per step:       2
+2026-03-30 07:06:33,964 [INFO]   Max new tokens:      16
+2026-03-30 07:06:33,964 [INFO]   DPR retrain every:   200 docs
+2026-03-30 07:06:33,964 [INFO]   Prompt format:       prompt_num=2
+2026-03-30 07:06:33,964 [INFO] ============================================================
+2026-03-30 07:06:33,964 [INFO] Epoch 1: sampled 300 docs from 40528 total
+2026-03-30 07:06:33,965 [INFO]   [DOC 1] Starting generation...
+2026-03-30 07:06:56,273 [INFO]   [DOC 1] Generation done in 22.3s | queries: ['', '', '', '']
+2026-03-30 07:06:56,274 [INFO]   [DOC 1] All queries empty, skipping
+2026-03-30 07:06:56,274 [INFO]   [DOC 1] Starting generation...
+2026-03-30 07:07:18,382 [INFO]   [DOC 1] Generation done in 22.1s | queries: ['159%', '256 Comments on a Page and Above', '230%', '2001005453358967']
+2026-03-30 07:07:18,444 [INFO]   [DOC 1] Rewards done in 0.1s | rewards: [0.0, 0.4085714285714286, 0.0, 0.0]
+2026-03-30 07:07:23,098 [INFO]   [DOC 1] Ref log probs done in 4.7s
+2026-03-30 07:07:27,334 [INFO]   [DOC 1] Curr log probs done in 4.2s
+2026-03-30 07:07:33,682 [INFO]   [DOC 3] Starting generation...
+2026-03-30 07:07:56,233 [INFO]   [DOC 3] Generation done in 22.6s | queries: ['', '', '', '']
+2026-03-30 07:07:56,233 [INFO]   [DOC 3] All queries empty, skipping
+2026-03-30 07:07:56,233 [INFO]   [DOC 3] Starting generation...
+2026-03-30 07:08:17,892 [INFO]   [DOC 3] Generation done in 21.7s | queries: ['12315%:438700029', '5834301449292673', '2532408979911088', '3675911301337500']
+2026-03-30 07:08:17,892 [INFO]   [DOC 3] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 07:08:22,260 [INFO]   [DOC 3] Ref log probs done in 4.4s
+2026-03-30 07:08:26,319 [INFO]   [DOC 3] Curr log probs done in 4.1s
+2026-03-30 07:08:31,480 [INFO]   [DOC 5] Starting generation...
+2026-03-30 07:08:48,835 [INFO]   [DOC 5] Generation done in 17.4s | queries: ['1942556482137', '215023', '140%', '14']
+2026-03-30 07:08:48,835 [INFO]   [DOC 5] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 07:08:53,487 [INFO]   [DOC 5] Ref log probs done in 4.7s
+2026-03-30 07:08:57,739 [INFO]   [DOC 5] Curr log probs done in 4.3s
+2026-03-30 07:08:57,741 [INFO]   [DOC 5] Starting generation...
+2026-03-30 07:09:16,398 [INFO]   [DOC 5] Generation done in 18.7s | queries: ['8280', '4350', '98/1641005000-1', '6457-1/28%-30-00']
+2026-03-30 07:09:16,398 [INFO]   [DOC 5] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 07:09:21,096 [INFO]   [DOC 5] Ref log probs done in 4.7s
+2026-03-30 07:09:32,193 [INFO]   [DOC 5] Curr log probs done in 11.1s
+2026-03-30 07:09:49,519 [INFO]   [DOC 7] Starting generation...
+2026-03-30 07:10:07,160 [INFO]   [DOC 7] Generation done in 17.6s | queries: ['14225 32/8 6', '1248', '2131465847391018', '42 3 5']
+2026-03-30 07:10:07,332 [INFO]   [DOC 7] Rewards done in 0.2s | rewards: [0.06000000000000001, 0.0, 0.0, 0.06000000000000001]
+2026-03-30 07:10:12,204 [INFO]   [DOC 7] Ref log probs done in 4.9s
+2026-03-30 07:10:17,584 [INFO]   [DOC 7] Curr log probs done in 5.4s
+2026-03-30 07:10:17,585 [INFO]   [DOC 7] Starting generation...
+2026-03-30 07:10:37,941 [INFO]   [DOC 7] Generation done in 20.4s | queries: ['364', '124 63 758 P', '2157689477083068', '27482']
+2026-03-30 07:10:38,057 [INFO]   [DOC 7] Rewards done in 0.1s | rewards: [0.0, 0.08000000000000002, 0.0, 0.0]
+2026-03-30 07:10:42,833 [INFO]   [DOC 7] Ref log probs done in 4.8s
+2026-03-30 07:11:07,885 [INFO]   [DOC 7] Curr log probs done in 25.1s
+2026-03-30 07:11:34,696 [INFO]   [DOC 9] Starting generation...
+2026-03-30 07:11:52,763 [INFO]   [DOC 9] Generation done in 18.1s | queries: ['265-98914-35/7', '25th Amen', '47-21359-16-88+', '312499']
+2026-03-30 07:11:52,763 [INFO]   [DOC 9] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 07:11:58,053 [INFO]   [DOC 9] Ref log probs done in 5.3s
+2026-03-30 07:12:02,380 [INFO]   [DOC 9] Curr log probs done in 4.3s
+2026-03-30 07:12:02,383 [INFO]   [DOC 9] Starting generation...
+2026-03-30 07:12:25,996 [INFO]   [DOC 9] Generation done in 23.6s | queries: ['9802016734% of PID', '28/2/34 aka baka', '2', '2324 98096132']
+2026-03-30 07:12:26,172 [INFO]   [DOC 9] Rewards done in 0.2s | rewards: [0.13999999999999999, 0.06000000000000001, 0.0, 0.0]
+2026-03-30 07:12:32,138 [INFO]   [DOC 9] Ref log probs done in 6.0s
+2026-03-30 07:12:45,836 [INFO]   [DOC 9] Curr log probs done in 13.7s
+2026-03-30 07:13:04,316 [INFO]   [DOC 11] Starting generation...
+2026-03-30 07:13:25,059 [INFO]   [DOC 11] Generation done in 20.7s | queries: ['250% probability 14% chance Average', '5 Words The end game; A game changer; The good', '124: 8-bites on an ounce a', '25 Words']
+2026-03-30 07:13:25,292 [INFO]   [DOC 11] Rewards done in 0.2s | rewards: [0.1, 0.41333333333333333, 0.16000000000000003, 0.0]
+2026-03-30 07:13:29,939 [INFO]   [DOC 11] Ref log probs done in 4.6s
+2026-03-30 07:13:35,111 [INFO]   [DOC 11] Curr log probs done in 5.2s
+2026-03-30 07:13:35,113 [INFO]   [DOC 11] Starting generation...
+2026-03-30 07:13:57,521 [INFO]   [DOC 11] Generation done in 22.4s | queries: ['193 - 24 - 6', '299/16 ratio: There ought not to be a time where', '1285734%', '1365']
+2026-03-30 07:13:57,626 [INFO]   [DOC 11] Rewards done in 0.1s | rewards: [0.1, 0.43200000000000005, 0.0, 0.0]
+2026-03-30 07:14:02,596 [INFO]   [DOC 11] Ref log probs done in 5.0s
+2026-03-30 07:14:08,787 [INFO]   [DOC 11] Curr log probs done in 6.2s
+2026-03-30 07:14:20,341 [INFO]   [DOC 13] Starting generation...
+2026-03-30 07:14:38,435 [INFO]   [DOC 13] Generation done in 18.1s | queries: ['24 year old man with a story to tell tall tales about loans being', '1763% (Baby) Birthday', '198-year old lady who sings her heart on a tree top', "24 years old It needs a lot more than that'll help"]
+2026-03-30 07:14:38,710 [INFO]   [DOC 13] Rewards done in 0.3s | rewards: [0.3942857142857143, 0.06000000000000001, 0.38181818181818183, 0.38181818181818183]
+2026-03-30 07:14:44,165 [INFO]   [DOC 13] Ref log probs done in 5.5s
+2026-03-30 07:14:48,440 [INFO]   [DOC 13] Curr log probs done in 4.3s
+2026-03-30 07:14:48,442 [INFO]   [DOC 13] Starting generation...
+2026-03-30 07:15:10,133 [INFO]   [DOC 13] Generation done in 21.7s | queries: ['255 years old young people with families who have children who do not', '18% of public figures', '3645 + 1 = 2', '24 years old in service']
+2026-03-30 07:15:10,397 [INFO]   [DOC 13] Rewards done in 0.3s | rewards: [0.36000000000000004, 0.28, 0.1, 0.30000000000000004]
+2026-03-30 07:15:15,912 [INFO]   [DOC 13] Ref log probs done in 5.5s
+2026-03-30 07:15:20,375 [INFO]   [DOC 13] Curr log probs done in 4.5s
+2026-03-30 07:15:30,953 [INFO]   [DOC 15] Starting generation...
+2026-03-30 07:15:52,730 [INFO]   [DOC 15] Generation done in 21.8s | queries: ['128 year olds needing to know about something', '9/125-day forecast', '25% of what it looks like on the outside up close', '415 years old to 236 months later (or more often']
+2026-03-30 07:15:52,924 [INFO]   [DOC 15] Rewards done in 0.2s | rewards: [0.39, 0.0, 0.38181818181818183, 0.384]
+2026-03-30 07:15:57,547 [INFO]   [DOC 15] Ref log probs done in 4.6s
+2026-03-30 07:16:01,827 [INFO]   [DOC 15] Curr log probs done in 4.3s
+2026-03-30 07:16:01,829 [INFO]   [DOC 15] Starting generation...
+2026-03-30 07:16:21,901 [INFO]   [DOC 15] Generation done in 20.1s | queries: ['14-85 percent (or more): 26/7 percent', '2017%', '2/3/14950% (tooften)', '30% by Nicole']
+2026-03-30 07:16:22,014 [INFO]   [DOC 15] Rewards done in 0.1s | rewards: [0.12000000000000002, 0.0, 0.0, 0.06000000000000001]
+2026-03-30 07:16:26,581 [INFO]   [DOC 15] Ref log probs done in 4.6s
+2026-03-30 07:16:30,538 [INFO]   [DOC 15] Curr log probs done in 4.0s
+2026-03-30 07:16:39,657 [INFO]   [DOC 17] Starting generation...
+2026-03-30 07:16:57,250 [INFO]   [DOC 17] Generation done in 17.6s | queries: ['1460% of those who think they have a right to vote on', '5 Things we need to know … to see how much better they feel about having', '😓※ ¶ “In fact… it’ll', '25% 19347 % 6859']
+2026-03-30 07:16:57,510 [INFO]   [DOC 17] Rewards done in 0.3s | rewards: [0.44, 0.376, 0.1, 0.08000000000000002]
+2026-03-30 07:17:02,697 [INFO]   [DOC 17] Ref log probs done in 5.2s
+2026-03-30 07:17:07,455 [INFO]   [DOC 17] Curr log probs done in 4.8s
+2026-03-30 07:17:07,457 [INFO]   [DOC 17] Starting generation...
+2026-03-30 07:17:31,699 [INFO]   [DOC 17] Generation done in 24.2s | queries: ['17%: Is there anything but what it seems like when we want everyone', "75 reasons why it'll make sense but only when life sucks hard", '3% of something not so simple anymore either There ain’t some real', '4things about people with bip-ups on both sides! Butt']
+2026-03-30 07:17:31,927 [INFO]   [DOC 17] Rewards done in 0.2s | rewards: [0.3784615384615385, 0.36000000000000004, 0.4, 0.36000000000000004]
+2026-03-30 07:17:36,733 [INFO]   [DOC 17] Ref log probs done in 4.8s
+2026-03-30 07:17:55,484 [INFO]   [DOC 17] Curr log probs done in 18.8s
+2026-03-30 07:18:20,267 [INFO]   [DOC 19] Starting generation...
+2026-03-30 07:18:39,203 [INFO]   [DOC 19] Generation done in 18.9s | queries: ['2851st time table is laid out upon the surface Thereby', '195% of those who have been sold out underneath and made', '750% of the economy has been greatly reduced due to self-actual', '14-7% of the Church (Reason) Why You Need To']
+2026-03-30 07:18:39,451 [INFO]   [DOC 19] Rewards done in 0.2s | rewards: [0.40800000000000003, 0.4036363636363637, 0.4254545454545455, 0.24]
+2026-03-30 07:18:44,023 [INFO]   [DOC 19] Ref log probs done in 4.6s
+2026-03-30 07:18:48,266 [INFO]   [DOC 19] Curr log probs done in 4.2s
+2026-03-30 07:18:48,269 [INFO]   [DOC 19] Starting generation...
+2026-03-30 07:19:15,203 [INFO]   [DOC 19] Generation done in 26.9s | queries: ['20187things will not always come out in the same way', '718 years later; after which they might have been unreasonable and', '125 year old stories in an ugly dirty backdrop! Not because', '250 year plan; because there were never any good Or rather']
+2026-03-30 07:19:15,460 [INFO]   [DOC 19] Rewards done in 0.3s | rewards: [0.384, 0.38181818181818183, 0.38181818181818183, 0.38181818181818183]
+2026-03-30 07:19:43,191 [INFO]   [DOC 19] Ref log probs done in 27.7s
+2026-03-30 07:20:18,632 [INFO]   [DOC 19] Curr log probs done in 35.4s
+2026-03-30 07:20:50,181 [INFO]   [DOC 21] Starting generation...
+2026-03-30 07:21:12,884 [INFO]   [DOC 21] Generation done in 22.7s | queries: ['25% of bonds may get collected from those who play in church p', '2195 percent comes from a free ride When they get on board', '275% more than you need help yourself when it comes out in your', '2315th Anni is not quite what it may seem like in']
+2026-03-30 07:21:13,233 [INFO]   [DOC 21] Rewards done in 0.3s | rewards: [0.36000000000000004, 0.38, 0.39692307692307693, 0.36000000000000004]
+2026-03-30 07:21:18,711 [INFO]   [DOC 21] Ref log probs done in 5.5s
+2026-03-30 07:21:23,012 [INFO]   [DOC 21] Curr log probs done in 4.3s
+2026-03-30 07:21:23,015 [INFO]   [DOC 21] Starting generation...
+2026-03-30 07:21:44,596 [INFO]   [DOC 21] Generation done in 21.6s | queries: ['98% of outcomes go toward one’s more easily collected than another', '195% of which pertains forth are sins from this new', '2197% offshore bank accounts may receive some benefits from tax', '13% percent of those who claim to pay cash from handbaked']
+2026-03-30 07:21:44,862 [INFO]   [DOC 21] Rewards done in 0.3s | rewards: [0.38181818181818183, 0.40800000000000003, 0.36000000000000004, 0.4036363636363637]
+2026-03-30 07:21:49,766 [INFO]   [DOC 21] Ref log probs done in 4.9s
+2026-03-30 07:21:56,323 [INFO]   [DOC 21] Curr log probs done in 6.6s
+2026-03-30 07:22:07,705 [INFO]   [DOC 23] Starting generation...
+2026-03-30 07:22:29,700 [INFO]   [DOC 23] Generation done in 22.0s | queries: ['2015 percent taxpayback in cash with every dollar', '20% of money may not come from what they want it in life;', '214things may get more complicated than they appear during this time period', '219thieves may lie in wait until they become a reality; this']
+2026-03-30 07:22:30,136 [INFO]   [DOC 23] Rewards done in 0.4s | rewards: [0.36000000000000004, 0.36000000000000004, 0.36000000000000004, 0.38181818181818183]
+2026-03-30 07:22:34,822 [INFO]   [DOC 23] Ref log probs done in 4.7s
+2026-03-30 07:22:39,253 [INFO]   [DOC 23] Curr log probs done in 4.4s
+2026-03-30 07:22:39,288 [INFO]   [DOC 23] Starting generation...
+2026-03-30 07:22:59,507 [INFO]   [DOC 23] Generation done in 20.2s | queries: ['1945% Least', '251% Likely And while being able to obtain favorable', '291% Offered by Christian organizations seeking to impose a check', '149% of which means the system does not benefit people who want what']
+2026-03-30 07:22:59,737 [INFO]   [DOC 23] Rewards done in 0.2s | rewards: [0.0, 0.3866666666666667, 0.40800000000000003, 0.41538461538461546]
+2026-03-30 07:23:05,133 [INFO]   [DOC 23] Ref log probs done in 5.4s

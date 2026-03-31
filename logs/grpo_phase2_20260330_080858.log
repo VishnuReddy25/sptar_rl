@@ -1,0 +1,48 @@
+2026-03-30 08:08:58,442 [INFO] Device: cuda:0
+2026-03-30 08:08:59,224 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 08:08:59,275 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 08:08:59,289 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 08:08:59,289 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 08:08:59,289 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 08:08:59,289 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 08:08:59,290 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 08:08:59,290 [INFO] Base LLM: meta-llama/Llama-2-7b-hf
+2026-03-30 08:09:35,092 [INFO] Base LLM loaded in 4-bit NF4
+2026-03-30 08:09:35,093 [INFO] Creating PEFT adapter: num_virtual_tokens=50, init_text='please generate query for this document'
+2026-03-30 08:09:35,775 [INFO] Loaded Phase 1 fiqa weights ((50, 4096)) into prompt_encoder.default.embedding.weight
+2026-03-30 08:09:35,778 [INFO] Trainable params: 204,800 (prompt encoder only)
+2026-03-30 08:09:36,456 [INFO] Reference encoder state snapshotted from Phase 1 weights
+2026-03-30 08:09:36,474 [INFO] PyTorch version 2.8.0 available.
+2026-03-30 08:09:36,671 [INFO] Load pretrained SentenceTransformer: zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-30 08:09:36,761 [INFO] DPR loaded from zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa (on CPU)
+2026-03-30 08:09:36,762 [INFO] Building DPR dense index ...
+2026-03-30 08:33:13,207 [INFO] DPR index shape: torch.Size([40528, 1024])
+2026-03-30 08:37:45,343 [INFO] Baseline NDCG@10 = 0.2938
+2026-03-30 08:37:45,351 [INFO] ============================================================
+2026-03-30 08:37:45,352 [INFO] Phase 2 GRPO loop starting
+2026-03-30 08:37:45,352 [INFO]   Full corpus:         40528 docs
+2026-03-30 08:37:45,352 [INFO]   Docs per epoch:      300 (random sample)
+2026-03-30 08:37:45,352 [INFO]   Group size G:        4
+2026-03-30 08:37:45,352 [INFO]   Docs per step:       2
+2026-03-30 08:37:45,352 [INFO]   Max new tokens:      16
+2026-03-30 08:37:45,352 [INFO]   DPR retrain every:   200 docs
+2026-03-30 08:37:45,352 [INFO]   Prompt format:       prompt_num=2
+2026-03-30 08:37:45,352 [INFO] ============================================================
+2026-03-30 08:37:45,352 [INFO] Epoch 1: sampled 300 docs from 40528 total
+2026-03-30 08:37:45,353 [INFO]   [DOC 1] Starting generation...
+2026-03-30 08:38:10,282 [INFO]   [DOC 1] Generation done in 24.9s | queries: ['', '', '', '']
+2026-03-30 08:38:10,283 [INFO]   [DOC 1] All queries empty, skipping
+2026-03-30 08:38:10,283 [INFO]   [DOC 1] Starting generation...
+2026-03-30 08:38:31,034 [INFO]   [DOC 1] Generation done in 20.8s | queries: ['159%', '256 Comments on a Page and Above', '230%', '2001005453358967']
+2026-03-30 08:38:31,092 [INFO]   [DOC 1] Rewards done in 0.1s | rewards: [0.0, 0.4085714285714286, 0.0, 0.0]
+2026-03-30 08:38:35,607 [INFO]   [DOC 1] Ref log probs done in 4.5s
+2026-03-30 08:38:39,759 [INFO]   [DOC 1] Curr log probs done in 4.2s
+2026-03-30 08:38:46,313 [INFO]   [DOC 3] Starting generation...
+2026-03-30 08:39:08,232 [INFO]   [DOC 3] Generation done in 21.9s | queries: ['', '', '', '']
+2026-03-30 08:39:08,232 [INFO]   [DOC 3] All queries empty, skipping
+2026-03-30 08:39:08,232 [INFO]   [DOC 3] Starting generation...
+2026-03-30 08:39:29,315 [INFO]   [DOC 3] Generation done in 21.1s | queries: ['12315%:438700029', '5834301449292673', '2532408979911088', '3675911301337500']
+2026-03-30 08:39:29,315 [INFO]   [DOC 3] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 08:39:33,712 [INFO]   [DOC 3] Ref log probs done in 4.4s
+2026-03-30 08:39:37,707 [INFO]   [DOC 3] Curr log probs done in 4.0s
+2026-03-30 08:39:42,762 [INFO]   [DOC 5] Starting generation...

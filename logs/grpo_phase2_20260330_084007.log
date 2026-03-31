@@ -1,0 +1,62 @@
+2026-03-30 08:40:07,646 [INFO] Device: cuda:0
+2026-03-30 08:40:08,349 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 08:40:08,392 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 08:40:08,406 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 08:40:08,406 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 08:40:08,407 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 08:40:08,407 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 08:40:08,407 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 08:40:08,407 [INFO] Base LLM: meta-llama/Llama-2-7b-hf
+2026-03-30 08:40:25,420 [INFO] Base LLM loaded in 4-bit NF4
+2026-03-30 08:40:25,420 [INFO] Creating PEFT adapter: num_virtual_tokens=50, init_text='please generate query for this document'
+2026-03-30 08:40:26,110 [INFO] Loaded Phase 1 fiqa weights ((50, 4096)) into prompt_encoder.default.embedding.weight
+2026-03-30 08:40:26,112 [INFO] Trainable params: 204,800 (prompt encoder only)
+2026-03-30 08:40:26,774 [INFO] Reference encoder state snapshotted from Phase 1 weights
+2026-03-30 08:40:26,786 [INFO] PyTorch version 2.8.0 available.
+2026-03-30 08:40:26,946 [INFO] Load pretrained SentenceTransformer: zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-30 08:40:27,031 [INFO] DPR loaded from zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa (on CPU)
+2026-03-30 08:40:27,031 [INFO] Building DPR dense index ...
+2026-03-30 09:04:06,372 [INFO] DPR index shape: torch.Size([40528, 1024])
+2026-03-30 09:08:48,995 [INFO] Baseline NDCG@10 = 0.2848
+2026-03-30 09:08:48,998 [INFO] ============================================================
+2026-03-30 09:08:48,998 [INFO] Phase 2 GRPO loop starting
+2026-03-30 09:08:48,998 [INFO]   Full corpus:         40528 docs
+2026-03-30 09:08:48,998 [INFO]   Docs per epoch:      300 (random sample)
+2026-03-30 09:08:48,998 [INFO]   Group size G:        4
+2026-03-30 09:08:48,998 [INFO]   Docs per step:       2
+2026-03-30 09:08:48,998 [INFO]   Max new tokens:      16
+2026-03-30 09:08:48,998 [INFO]   DPR retrain every:   200 docs
+2026-03-30 09:08:48,998 [INFO]   Prompt format:       prompt_num=2
+2026-03-30 09:08:48,999 [INFO] ============================================================
+2026-03-30 09:08:48,999 [INFO] Epoch 1: sampled 300 docs from 40528 total
+2026-03-30 09:08:48,999 [INFO]   [DOC 1] Starting generation...
+2026-03-30 09:09:11,083 [INFO]   [DOC 1] Generation done in 22.1s | queries: ['198/17502342', '248311985691170', '78245964122', '2413 days ago or something that they have paid off in']
+2026-03-30 09:09:11,143 [INFO]   [DOC 1] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.0, 0.4254545454545455]
+2026-03-30 09:09:16,574 [INFO]   [DOC 1] Ref log probs done in 5.4s
+2026-03-30 09:09:20,626 [INFO]   [DOC 1] Curr log probs done in 4.1s
+2026-03-30 09:09:20,644 [INFO]   [DOC 1] Starting generation...
+2026-03-30 09:09:38,932 [INFO]   [DOC 1] Generation done in 18.3s | queries: ['159827:14764', '197%', '312', '2nd And Coffee']
+2026-03-30 09:09:38,988 [INFO]   [DOC 1] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.0, 0.19999999999999998]
+2026-03-30 09:09:43,399 [INFO]   [DOC 1] Ref log probs done in 4.4s
+2026-03-30 09:09:48,525 [INFO]   [DOC 1] Curr log probs done in 5.1s
+2026-03-30 09:09:58,153 [INFO]   [DOC 3] Starting generation...
+2026-03-30 09:10:15,880 [INFO]   [DOC 3] Generation done in 17.7s | queries: ['45013561736', '57-Year or Scared for Life', '150%', '37:5']
+2026-03-30 09:10:15,937 [INFO]   [DOC 3] Rewards done in 0.1s | rewards: [0.0, 0.396, 0.0, 0.0]
+2026-03-30 09:10:21,605 [INFO]   [DOC 3] Ref log probs done in 5.7s
+2026-03-30 09:10:26,051 [INFO]   [DOC 3] Curr log probs done in 4.4s
+2026-03-30 09:10:26,052 [INFO]   [DOC 3] Starting generation...
+2026-03-30 09:10:48,077 [INFO]   [DOC 3] Generation done in 22.0s | queries: ['20142', '46551792583', '3643271397', '17556%29%']
+2026-03-30 09:10:48,077 [INFO]   [DOC 3] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 09:10:53,484 [INFO]   [DOC 3] Ref log probs done in 5.4s
+2026-03-30 09:10:57,640 [INFO]   [DOC 3] Curr log probs done in 4.2s
+2026-03-30 09:11:08,539 [INFO]   [DOC 5] Starting generation...
+2026-03-30 09:11:30,391 [INFO]   [DOC 5] Generation done in 21.9s | queries: ['4those query:', '50413316', '73', '500+ 6487+ or better']
+2026-03-30 09:11:30,453 [INFO]   [DOC 5] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.0, 0.13999999999999999]
+2026-03-30 09:11:35,093 [INFO]   [DOC 5] Ref log probs done in 4.6s
+2026-03-30 09:11:39,421 [INFO]   [DOC 5] Curr log probs done in 4.3s
+2026-03-30 09:11:39,423 [INFO]   [DOC 5] Starting generation...
+2026-03-30 09:12:01,071 [INFO]   [DOC 5] Generation done in 21.6s | queries: ['1201020934411895', '1999 5782 645', '29740 331635', '455%21999822256']
+2026-03-30 09:12:01,126 [INFO]   [DOC 5] Rewards done in 0.1s | rewards: [0.0, 0.06000000000000001, 0.0, 0.0]
+2026-03-30 09:12:05,692 [INFO]   [DOC 5] Ref log probs done in 4.6s
+2026-03-30 09:12:10,185 [INFO]   [DOC 5] Curr log probs done in 4.5s
+2026-03-30 09:12:20,167 [INFO]   [DOC 7] Starting generation...

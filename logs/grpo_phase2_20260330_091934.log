@@ -1,0 +1,171 @@
+2026-03-30 09:19:34,487 [INFO] Device: cuda:0
+2026-03-30 09:19:35,162 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 09:19:35,202 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 09:19:35,218 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 09:19:35,218 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 09:19:35,218 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 09:19:35,218 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 09:19:35,218 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 09:19:35,218 [INFO] Base LLM: meta-llama/Llama-2-7b-hf
+2026-03-30 09:19:48,407 [INFO] Base LLM loaded in 4-bit NF4
+2026-03-30 09:19:48,407 [INFO] Creating PEFT adapter: num_virtual_tokens=50, init_text='please generate query for this document'
+2026-03-30 09:19:49,086 [INFO] Loaded Phase 1 fiqa weights ((50, 4096)) into prompt_encoder.default.embedding.weight
+2026-03-30 09:19:49,088 [INFO] Trainable params: 204,800 (prompt encoder only)
+2026-03-30 09:19:49,734 [INFO] Reference encoder state snapshotted from Phase 1 weights
+2026-03-30 09:19:49,749 [INFO] PyTorch version 2.8.0 available.
+2026-03-30 09:19:49,915 [INFO] Load pretrained SentenceTransformer: zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-30 09:19:50,004 [INFO] DPR loaded from zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa (on CPU)
+2026-03-30 09:19:50,004 [INFO] Building DPR dense index ...
+2026-03-30 09:43:29,482 [INFO] DPR index shape: torch.Size([40528, 1024])
+2026-03-30 09:48:05,731 [INFO] Baseline NDCG@10 = 0.2848
+2026-03-30 09:48:05,736 [INFO] ============================================================
+2026-03-30 09:48:05,736 [INFO] Phase 2 GRPO loop starting
+2026-03-30 09:48:05,736 [INFO]   Full corpus:         40528 docs
+2026-03-30 09:48:05,736 [INFO]   Docs per epoch:      300 (random sample)
+2026-03-30 09:48:05,736 [INFO]   Group size G:        4
+2026-03-30 09:48:05,736 [INFO]   Docs per step:       2
+2026-03-30 09:48:05,736 [INFO]   Max new tokens:      16
+2026-03-30 09:48:05,736 [INFO]   DPR retrain every:   200 docs
+2026-03-30 09:48:05,736 [INFO]   Prompt format:       prompt_num=2
+2026-03-30 09:48:05,736 [INFO] ============================================================
+2026-03-30 09:48:05,737 [INFO] Epoch 1: sampled 300 docs from 40528 total
+2026-03-30 09:48:05,738 [INFO]   [DOC 1] Doc text preview: Million of people uses computer a day. In those of people, few are knows how to keep their computers
+2026-03-30 09:48:05,738 [INFO]   [DOC 1] Starting generation...
+2026-03-30 09:48:27,995 [INFO]   [DOC 1] Generation done in 22.3s | queries: ['198/17502342', '248311985691170', '78245964122', '2413 days ago or something that they have paid off in']
+2026-03-30 09:48:28,061 [INFO]   [DOC 1] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.0, 0.4254545454545455]
+2026-03-30 09:48:33,524 [INFO]   [DOC 1] Ref log probs done in 5.5s
+2026-03-30 09:48:37,559 [INFO]   [DOC 1] Curr log probs done in 4.0s
+2026-03-30 09:48:37,586 [INFO]   [DOC 1] Doc text preview: This is the most common option offered by these companies and it offers only rudimentary protection 
+2026-03-30 09:48:37,586 [INFO]   [DOC 1] Starting generation...
+2026-03-30 09:48:54,750 [INFO]   [DOC 1] Generation done in 17.2s | queries: ['159827:14764', '197%', '312', '2nd And Coffee']
+2026-03-30 09:48:54,799 [INFO]   [DOC 1] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.19999999999999998]
+2026-03-30 09:48:59,114 [INFO]   [DOC 1] Ref log probs done in 4.3s
+2026-03-30 09:49:03,252 [INFO]   [DOC 1] Curr log probs done in 4.1s
+2026-03-30 09:49:13,781 [INFO]   [DOC 3] Doc text preview: "Then that doctor will have to decide whether they want to keep making $200k / year or screw around 
+2026-03-30 09:49:13,781 [INFO]   [DOC 3] Starting generation...
+2026-03-30 09:49:32,664 [INFO]   [DOC 3] Generation done in 18.9s | queries: ['45013561736', '57-Year or Scared for Life', '150%', '37:5']
+2026-03-30 09:49:32,716 [INFO]   [DOC 3] Rewards done in 0.1s | rewards: [0.0, 0.396, 0.0, 0.0]
+2026-03-30 09:49:37,259 [INFO]   [DOC 3] Ref log probs done in 4.5s
+2026-03-30 09:49:42,602 [INFO]   [DOC 3] Curr log probs done in 5.3s
+2026-03-30 09:49:42,604 [INFO]   [DOC 3] Doc text preview: When it comes to Vortex Optics, you are going to gain access to wide variety of high performance hun
+2026-03-30 09:49:42,604 [INFO]   [DOC 3] Starting generation...
+2026-03-30 09:50:04,000 [INFO]   [DOC 3] Generation done in 21.4s | queries: ['20142', '46551792583', '3643271397', '17556%29%']
+2026-03-30 09:50:04,000 [INFO]   [DOC 3] Rewards done in 0.0s | rewards: [0.0, 0.0, 0.0, 0.0]
+2026-03-30 09:50:08,454 [INFO]   [DOC 3] Ref log probs done in 4.5s
+2026-03-30 09:50:13,719 [INFO]   [DOC 3] Curr log probs done in 5.3s
+2026-03-30 09:50:24,259 [INFO]   [DOC 5] Doc text preview: In instances where some poor white voters go republican is because of the attitude against them on t
+2026-03-30 09:50:24,259 [INFO]   [DOC 5] Starting generation...
+2026-03-30 09:50:43,389 [INFO]   [DOC 5] Generation done in 19.1s | queries: ['4those query:', '50413316', '73', '500+ 6487+ or better']
+2026-03-30 09:50:43,448 [INFO]   [DOC 5] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.0, 0.13999999999999999]
+2026-03-30 09:50:48,840 [INFO]   [DOC 5] Ref log probs done in 5.4s
+2026-03-30 09:50:53,453 [INFO]   [DOC 5] Curr log probs done in 4.6s
+2026-03-30 09:50:53,455 [INFO]   [DOC 5] Doc text preview: This cleanly illustrates the problem, but it leaves off with only a vague gesture at change. This me
+2026-03-30 09:50:53,455 [INFO]   [DOC 5] Starting generation...
+2026-03-30 09:51:14,333 [INFO]   [DOC 5] Generation done in 20.9s | queries: ['1201020934411895', '1999 5782 645', '29740 331635', '455%21999822256']
+2026-03-30 09:51:14,389 [INFO]   [DOC 5] Rewards done in 0.1s | rewards: [0.0, 0.06000000000000001, 0.0, 0.0]
+2026-03-30 09:51:20,009 [INFO]   [DOC 5] Ref log probs done in 5.6s
+2026-03-30 09:51:24,382 [INFO]   [DOC 5] Curr log probs done in 4.4s
+2026-03-30 09:51:33,802 [INFO]   [DOC 7] Doc text preview: At some point I just wanted to make free apps for grocery stores just so I could stop wandering arou
+2026-03-30 09:51:33,802 [INFO]   [DOC 7] Starting generation...
+2026-03-30 09:51:52,937 [INFO]   [DOC 7] Generation done in 19.1s | queries: ['24 8 9/16 3', '43732', '124783560%32', '2416890032022042']
+2026-03-30 09:51:52,989 [INFO]   [DOC 7] Rewards done in 0.1s | rewards: [0.08000000000000002, 0.0, 0.0, 0.0]
+2026-03-30 09:51:57,673 [INFO]   [DOC 7] Ref log probs done in 4.7s
+2026-03-30 09:52:02,102 [INFO]   [DOC 7] Curr log probs done in 4.4s
+2026-03-30 09:52:02,104 [INFO]   [DOC 7] Doc text preview: &gt; integrity and honesty is the lifeblood of any company who wants to stay in business for longer 
+2026-03-30 09:52:02,104 [INFO]   [DOC 7] Starting generation...
+2026-03-30 09:52:19,121 [INFO]   [DOC 7] Generation done in 17.0s | queries: ['25% of 17', '40%', '275%', '2423']
+2026-03-30 09:52:19,183 [INFO]   [DOC 7] Rewards done in 0.1s | rewards: [0.13999999999999999, 0.0, 0.0, 0.0]
+2026-03-30 09:52:23,789 [INFO]   [DOC 7] Ref log probs done in 4.6s
+2026-03-30 09:52:31,037 [INFO]   [DOC 7] Curr log probs done in 7.2s
+2026-03-30 09:52:42,969 [INFO]   [DOC 9] Doc text preview: "&gt;  BP's spill happened because a complex organizational structure didn't work as intended  That 
+2026-03-30 09:52:42,970 [INFO]   [DOC 9] Starting generation...
+2026-03-30 09:53:01,130 [INFO]   [DOC 9] Generation done in 18.2s | queries: ['3" "The 5th" "217th" 6', '420 35 1700 968%', '2 +3 = x (15) +4 - 98=', '272 365 14 983 -2']
+2026-03-30 09:53:01,372 [INFO]   [DOC 9] Rewards done in 0.2s | rewards: [0.1, 0.08000000000000002, 0.16000000000000003, 0.1]
+2026-03-30 09:53:06,106 [INFO]   [DOC 9] Ref log probs done in 4.7s
+2026-03-30 09:53:10,457 [INFO]   [DOC 9] Curr log probs done in 4.4s
+2026-03-30 09:53:10,460 [INFO]   [DOC 9] Doc text preview: "&gt; Wall St ripped off retail investors pretty good  ""Ripped off"" ?  How about ""retail investor
+2026-03-30 09:53:10,460 [INFO]   [DOC 9] Starting generation...
+2026-03-30 09:53:33,207 [INFO]   [DOC 9] Generation done in 22.7s | queries: ['354%37869%1452%4', '3rd World Banker: The United States', '9th letter "A" "Theeconomics" 7 "8', '80s 35 s 7 + 4/9 * -']
+2026-03-30 09:53:33,372 [INFO]   [DOC 9] Rewards done in 0.2s | rewards: [0.0, 0.36000000000000004, 0.12000000000000002, 0.16000000000000003]
+2026-03-30 09:53:38,056 [INFO]   [DOC 9] Ref log probs done in 4.7s
+2026-03-30 09:53:57,479 [INFO]   [DOC 9] Curr log probs done in 19.4s
+2026-03-30 09:54:22,292 [INFO]   [DOC 11] Doc text preview: America is at 4.4% unemployment. If you can't find a job right now you live in a place that was depe
+2026-03-30 09:54:22,292 [INFO]   [DOC 11] Starting generation...
+2026-03-30 09:54:40,260 [INFO]   [DOC 11] Generation done in 18.0s | queries: ['15-2 (3-years) and 865', '12', '72!', "13-year olds! CANO'SISM!"]
+2026-03-30 09:54:40,378 [INFO]   [DOC 11] Rewards done in 0.1s | rewards: [0.08000000000000002, 0.0, 0.0, 0.06000000000000001]
+2026-03-30 09:54:44,891 [INFO]   [DOC 11] Ref log probs done in 4.5s
+2026-03-30 09:54:49,036 [INFO]   [DOC 11] Curr log probs done in 4.1s
+2026-03-30 09:54:49,037 [INFO]   [DOC 11] Doc text preview: As a developer in a former life, I would not even get out of bed for $50 an hour. My normal charge o
+2026-03-30 09:54:49,038 [INFO]   [DOC 11] Starting generation...
+2026-03-30 09:55:06,948 [INFO]   [DOC 11] Generation done in 17.9s | queries: ['423', '243: Cancer Dangely', '6 I don’t know who he knows 9-to five', '16-8 24+2=3 9-']
+2026-03-30 09:55:07,144 [INFO]   [DOC 11] Rewards done in 0.2s | rewards: [0.0, 0.06000000000000001, 0.3866666666666667, 0.06000000000000001]
+2026-03-30 09:55:12,939 [INFO]   [DOC 11] Ref log probs done in 5.8s
+2026-03-30 09:55:22,190 [INFO]   [DOC 11] Curr log probs done in 9.3s
+2026-03-30 09:55:36,634 [INFO]   [DOC 13] Doc text preview: Well, then, nice to meet you.  I was offered a such a job.  The hirer didn't even know what I get pa
+2026-03-30 09:55:36,635 [INFO]   [DOC 13] Starting generation...
+2026-03-30 09:55:56,148 [INFO]   [DOC 13] Generation done in 19.5s | queries: ['29 months! Oh my god! No time like clock without chronology', '23/4th grade child pregnant woman 8', '20/39', '45th anniversary of birth']
+2026-03-30 09:55:56,327 [INFO]   [DOC 13] Rewards done in 0.2s | rewards: [0.36000000000000004, 0.32000000000000006, 0.0, 0.28]
+2026-03-30 09:56:01,014 [INFO]   [DOC 13] Ref log probs done in 4.7s
+2026-03-30 09:56:05,287 [INFO]   [DOC 13] Curr log probs done in 4.3s
+2026-03-30 09:56:05,290 [INFO]   [DOC 13] Doc text preview: Those compensated by commission, not your moneyed elite. Those types are going to get out of taxes a
+2026-03-30 09:56:05,290 [INFO]   [DOC 13] Starting generation...
+2026-03-30 09:56:24,357 [INFO]   [DOC 13] Generation done in 19.1s | queries: ['137 (also) 9/8-year old man! You', '16', '28ths and 754316965-', '26 months! No time like clocks All times all times']
+2026-03-30 09:56:24,510 [INFO]   [DOC 13] Rewards done in 0.2s | rewards: [0.16000000000000003, 0.0, 0.13999999999999999, 0.42000000000000004]
+2026-03-30 09:56:29,028 [INFO]   [DOC 13] Ref log probs done in 4.5s
+2026-03-30 09:56:33,032 [INFO]   [DOC 13] Curr log probs done in 4.0s
+2026-03-30 09:56:42,905 [INFO]   [DOC 15] Doc text preview: The same argument holds for copyright.  The time to set lord Voldemort free is when the kids who gre
+2026-03-30 09:56:42,906 [INFO]   [DOC 15] Starting generation...
+2026-03-30 09:57:03,637 [INFO]   [DOC 15] Generation done in 20.7s | queries: ['196 I just want my cake You get outta here', "45th Amendments! You're damned about ammended", '19/16-years old man He was born in a', '51342!']
+2026-03-30 09:57:03,797 [INFO]   [DOC 15] Rewards done in 0.2s | rewards: [0.36000000000000004, 0.32000000000000006, 0.16000000000000003, 0.0]
+2026-03-30 09:57:08,181 [INFO]   [DOC 15] Ref log probs done in 4.4s
+2026-03-30 09:57:12,359 [INFO]   [DOC 15] Curr log probs done in 4.2s
+2026-03-30 09:57:12,361 [INFO]   [DOC 15] Doc text preview: Similar story with the last big corporate company I worked for.  One of the major hotel chains dicke
+2026-03-30 09:57:12,361 [INFO]   [DOC 15] Starting generation...
+2026-03-30 09:57:34,025 [INFO]   [DOC 15] Generation done in 21.7s | queries: ['17 minutes!', '24 years old man! We gotta new we need a new', '24D "And another"', '187 (or so) days until it gets better']
+2026-03-30 09:57:34,195 [INFO]   [DOC 15] Rewards done in 0.2s | rewards: [0.0, 0.3866666666666667, 0.06000000000000001, 0.36000000000000004]
+2026-03-30 09:57:39,328 [INFO]   [DOC 15] Ref log probs done in 5.1s
+2026-03-30 09:57:43,852 [INFO]   [DOC 15] Curr log probs done in 4.5s
+2026-03-30 09:57:53,241 [INFO]   [DOC 17] Doc text preview: Emerald Floors Premier, low-rise premium homes featuring the highest design standards and quality am
+2026-03-30 09:57:53,242 [INFO]   [DOC 17] Starting generation...
+2026-03-30 09:58:11,520 [INFO]   [DOC 17] Generation done in 18.3s | queries: ['785%', '19/5/6 We have an urgent need to know this', '3528479621! Is it 1', '3148 days later']
+2026-03-30 09:58:11,681 [INFO]   [DOC 17] Rewards done in 0.2s | rewards: [0.0, 0.3866666666666667, 0.2, 0.06000000000000001]
+2026-03-30 09:58:16,215 [INFO]   [DOC 17] Ref log probs done in 4.5s
+2026-03-30 09:58:20,494 [INFO]   [DOC 17] Curr log probs done in 4.3s
+2026-03-30 09:58:20,495 [INFO]   [DOC 17] Doc text preview: I have no idea where this lie started and why it is perpetuated. A CEOs only fiduciary duty is to ma
+2026-03-30 09:58:20,495 [INFO]   [DOC 17] Starting generation...
+2026-03-30 09:58:39,466 [INFO]   [DOC 17] Generation done in 19.0s | queries: ['76 months until Christmas…', '437% tax hike', '36', '65 times out of control…']
+2026-03-30 09:58:39,612 [INFO]   [DOC 17] Rewards done in 0.1s | rewards: [0.28, 0.06000000000000001, 0.0, 0.30000000000000004]
+2026-03-30 09:58:43,861 [INFO]   [DOC 17] Ref log probs done in 4.2s
+2026-03-30 09:58:47,791 [INFO]   [DOC 17] Curr log probs done in 3.9s
+2026-03-30 09:58:57,734 [INFO]   [DOC 19] Doc text preview: He should definitely look into a 529 plan.  Each state offers one.  These provide tax incentives.  O
+2026-03-30 09:58:57,734 [INFO]   [DOC 19] Starting generation...
+2026-03-30 09:59:18,531 [INFO]   [DOC 19] Generation done in 20.8s | queries: ['763', '3', '6 Is it true enough that your query here with this particular style of music', '6']
+2026-03-30 09:59:18,594 [INFO]   [DOC 19] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.392, 0.0]
+2026-03-30 09:59:23,073 [INFO]   [DOC 19] Ref log probs done in 4.5s
+2026-03-30 09:59:27,291 [INFO]   [DOC 19] Curr log probs done in 4.2s
+2026-03-30 09:59:27,294 [INFO]   [DOC 19] Doc text preview: How is suggesting to them that they smoke cannabis instead of taking addictive pills that destroy li
+2026-03-30 09:59:27,294 [INFO]   [DOC 19] Starting generation...
+2026-03-30 09:59:45,311 [INFO]   [DOC 19] Generation done in 18.0s | queries: ['217 Times When Someone Else Has Had A Pandemic Flu With', '184 days later! And why wouldn’t you spend two weeks writing', '132-year old man was lost on the floor before he got run', '4237 Things You Need To Know About Them!']
+2026-03-30 09:59:45,536 [INFO]   [DOC 19] Rewards done in 0.2s | rewards: [0.4254545454545455, 0.38181818181818183, 0.38, 0.39]
+2026-03-30 09:59:50,293 [INFO]   [DOC 19] Ref log probs done in 4.8s
+2026-03-30 10:00:06,778 [INFO]   [DOC 19] Curr log probs done in 16.5s
+2026-03-30 10:00:28,219 [INFO]   [DOC 21] Doc text preview: How in the hell can they put a positive spin on this? 1.  Consumers cars were materially modified wi
+2026-03-30 10:00:28,221 [INFO]   [DOC 21] Starting generation...
+2026-03-30 10:00:46,932 [INFO]   [DOC 21] Generation done in 18.7s | queries: ['659/84 years old man', '48 63 days ago! 7 Days like these before', '5 6 Try again! You do it like me I mean', '9 456 days later']
+2026-03-30 10:00:47,155 [INFO]   [DOC 21] Rewards done in 0.2s | rewards: [0.08000000000000002, 0.36000000000000004, 0.36000000000000004, 0.08000000000000002]
+2026-03-30 10:00:51,696 [INFO]   [DOC 21] Ref log probs done in 4.5s
+2026-03-30 10:00:55,950 [INFO]   [DOC 21] Curr log probs done in 4.3s
+2026-03-30 10:00:55,952 [INFO]   [DOC 21] Doc text preview: [Thanks for civility]  Your situation sounds very rough and I'm sorry for it,  truly I'm. This is a 
+2026-03-30 10:00:55,952 [INFO]   [DOC 21] Starting generation...
+2026-03-30 10:01:21,960 [INFO]   [DOC 21] Generation done in 26.0s | queries: ['8765 words per minute', '5876%', '599 words per minute about a song title called "Mary"', '58-476% of a good time That means']
+2026-03-30 10:01:22,140 [INFO]   [DOC 21] Rewards done in 0.2s | rewards: [0.08000000000000002, 0.0, 0.384, 0.24285714285714288]
+2026-03-30 10:01:27,133 [INFO]   [DOC 21] Ref log probs done in 5.0s
+2026-03-30 10:01:52,020 [INFO]   [DOC 21] Curr log probs done in 24.9s
+2026-03-30 10:02:20,122 [INFO]   [DOC 23] Doc text preview: That makes sense. So yeah it basically sounds like a speculative bubble based on limited supply and 
+2026-03-30 10:02:20,125 [INFO]   [DOC 23] Starting generation...
+2026-03-30 10:02:41,609 [INFO]   [DOC 23] Generation done in 21.5s | queries: ['5-3248-917-65 (Five', '197-35246-88-2 (N', '51st century BCEO (Chief Executive Officer) in charge/', '24: Avoid using "the R word" in relation to this thing']
+2026-03-30 10:02:41,734 [INFO]   [DOC 23] Rewards done in 0.1s | rewards: [0.0, 0.0, 0.36000000000000004, 0.38181818181818183]
+2026-03-30 10:02:46,089 [INFO]   [DOC 23] Ref log probs done in 4.4s
+2026-03-30 10:02:50,109 [INFO]   [DOC 23] Curr log probs done in 4.0s
+2026-03-30 10:02:50,111 [INFO]   [DOC 23] Doc text preview: "No.  It is known as the ""Chinese curse"" look it up in Google...   &gt; ""May you live in interest
+2026-03-30 10:02:50,111 [INFO]   [DOC 23] Starting generation...

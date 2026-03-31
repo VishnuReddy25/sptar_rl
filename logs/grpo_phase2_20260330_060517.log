@@ -1,0 +1,32 @@
+2026-03-30 06:05:17,822 [INFO] Device: cuda:0
+2026-03-30 06:05:18,528 [INFO] Corpus: 40528 documents from ./xuyang/data/fiqa_50/100k/corpus_filtered_100k.csv
+2026-03-30 06:05:18,581 [INFO] Phase 1 data: 24408 queries, 27418 qrels
+2026-03-30 06:05:18,596 [INFO] Seed: 19526 queries | Eval: 4882 queries | Eval pairs: 4882
+2026-03-30 06:05:18,596 [INFO] Loading PEFT config from ./xuyang/llm_models/v1_msmarco_50_llama-7b_llama-7b_CAUSAL_LM_TEXT_50_100_3_2024-08-23_0/llama-7b_CAUSAL_LM_TEXT
+2026-03-30 06:05:18,596 [WARNING] base_model_name_or_path '/ssd/public_datasets/llama/llama_to_hf/llama-7b' not found locally.
+2026-03-30 06:05:18,596 [WARNING] Falling back to meta-llama/Llama-2-7b-hf from HF Hub.
+2026-03-30 06:05:18,596 [WARNING] Set --base_model to override if you have a local copy.
+2026-03-30 06:05:18,596 [INFO] Base LLM: meta-llama/Llama-2-7b-hf
+2026-03-30 06:05:57,304 [INFO] Base LLM loaded in 4-bit NF4
+2026-03-30 06:05:57,304 [INFO] Creating PEFT adapter: num_virtual_tokens=50, init_text='please generate query for this document'
+2026-03-30 06:05:57,930 [INFO] Loaded Phase 1 fiqa weights ((50, 4096)) into prompt_encoder.default.embedding.weight
+2026-03-30 06:05:57,933 [INFO] Trainable params: 204,800 (prompt encoder only)
+2026-03-30 06:05:58,494 [INFO] Reference encoder state snapshotted from Phase 1 weights
+2026-03-30 06:05:58,510 [INFO] PyTorch version 2.8.0 available.
+2026-03-30 06:05:58,696 [INFO] Load pretrained SentenceTransformer: zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-30 06:05:58,790 [INFO] DPR loaded from zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa (on CPU)
+2026-03-30 06:05:58,790 [INFO] Building DPR dense index ...
+2026-03-30 06:29:29,285 [INFO] DPR index shape: torch.Size([40528, 1024])
+2026-03-30 06:34:08,301 [INFO] Baseline NDCG@10 = 0.2938
+2026-03-30 06:34:08,308 [INFO] ============================================================
+2026-03-30 06:34:08,308 [INFO] Phase 2 GRPO loop starting
+2026-03-30 06:34:08,308 [INFO]   Full corpus:         40528 docs
+2026-03-30 06:34:08,309 [INFO]   Docs per epoch:      300 (random sample)
+2026-03-30 06:34:08,309 [INFO]   Group size G:        4
+2026-03-30 06:34:08,309 [INFO]   Docs per step:       2
+2026-03-30 06:34:08,309 [INFO]   Max new tokens:      16
+2026-03-30 06:34:08,309 [INFO]   DPR retrain every:   200 docs
+2026-03-30 06:34:08,309 [INFO]   Prompt format:       prompt_num=2
+2026-03-30 06:34:08,309 [INFO] ============================================================
+2026-03-30 06:34:08,309 [INFO] Epoch 1: sampled 300 docs from 40528 total
+2026-03-30 06:34:08,310 [INFO]   [DOC 1] Starting generation...
