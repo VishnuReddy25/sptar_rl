@@ -1,5 +1,5 @@
 2026-03-31 14:59:51 - Use pytorch device_name: cuda:0
-2026-03-31 14:59:51 - Load pretrained SentenceTransformer: /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 14:59:51 - Load pretrained SentenceTransformer: /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/
 2026-03-31 14:59:52 - Loading dataset: fiqa
 2026-03-31 14:59:52 - Loading Corpus...
 2026-03-31 14:59:52 - Loaded 57638 TEST Documents.
@@ -96,4 +96,4 @@ Recall
 2026-03-31 15:23:49 - Recall@300: 0.7006
 2026-03-31 15:23:49 - Recall@500: 0.7569
 2026-03-31 15:23:49 - Recall@1000: 0.8333
-2026-03-31 15:23:49 - Saved results to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa/fiqa_results.json
+2026-03-31 15:23:49 - Saved results to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/fiqa_results.json
