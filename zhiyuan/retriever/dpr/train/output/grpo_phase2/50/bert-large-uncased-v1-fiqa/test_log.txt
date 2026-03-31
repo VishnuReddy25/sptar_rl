@@ -1,0 +1,99 @@
+2026-03-31 14:59:51 - Use pytorch device_name: cuda:0
+2026-03-31 14:59:51 - Load pretrained SentenceTransformer: /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 14:59:52 - Loading dataset: fiqa
+2026-03-31 14:59:52 - Loading Corpus...
+2026-03-31 14:59:52 - Loaded 57638 TEST Documents.
+2026-03-31 14:59:52 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2026-03-31 14:59:52 - Loading Queries...
+2026-03-31 14:59:52 - Loaded 648 TEST Queries.
+2026-03-31 14:59:52 - Query Example: How to deposit a cheque issued to an associate in my business into my business account?
+2026-03-31 14:59:52 - Running retrieval...
+2026-03-31 14:59:52 - Encoding Queries...
+2026-03-31 14:59:53 - Sorting Corpus by document length (Longest first)...
+2026-03-31 14:59:53 - Encoding Corpus in batches... Warning: This might take a while!
+2026-03-31 14:59:53 - Scoring Function: Cosine Similarity (cos_sim)
+2026-03-31 14:59:53 - Encoding Batch 1/1...
+2026-03-31 15:23:49 - 
+==== Evaluation: fiqa ====
+2026-03-31 15:23:49 - For evaluation, we ignore identical query and document ids (default), please explicitly set ``ignore_identical_ids=False`` to ignore this.
+2026-03-31 15:23:49 - 
+
+2026-03-31 15:23:49 - NDCG@1: 0.2315
+2026-03-31 15:23:49 - NDCG@3: 0.2138
+2026-03-31 15:23:49 - NDCG@5: 0.2200
+2026-03-31 15:23:49 - NDCG@10: 0.2406
+2026-03-31 15:23:49 - NDCG@100: 0.3097
+2026-03-31 15:23:49 - NDCG@300: 0.3345
+2026-03-31 15:23:49 - NDCG@500: 0.3432
+2026-03-31 15:23:49 - NDCG@1000: 0.3537
+2026-03-31 15:23:49 - 
+
+2026-03-31 15:23:49 - MAP@1: 0.1109
+2026-03-31 15:23:49 - MAP@3: 0.1560
+2026-03-31 15:23:49 - MAP@5: 0.1687
+2026-03-31 15:23:49 - MAP@10: 0.1814
+2026-03-31 15:23:49 - MAP@100: 0.1970
+2026-03-31 15:23:49 - MAP@300: 0.1987
+2026-03-31 15:23:49 - MAP@500: 0.1991
+2026-03-31 15:23:49 - MAP@1000: 0.1993
+2026-03-31 15:23:49 - 
+
+2026-03-31 15:23:49 - Recall@1: 0.1109
+2026-03-31 15:23:49 - Recall@3: 0.1948
+2026-03-31 15:23:49 - Recall@5: 0.2318
+2026-03-31 15:23:49 - Recall@10: 0.2949
+2026-03-31 15:23:49 - Recall@100: 0.5635
+2026-03-31 15:23:49 - Recall@300: 0.7006
+2026-03-31 15:23:49 - Recall@500: 0.7569
+2026-03-31 15:23:49 - Recall@1000: 0.8333
+2026-03-31 15:23:49 - 
+
+2026-03-31 15:23:49 - P@1: 0.2315
+2026-03-31 15:23:49 - P@3: 0.1430
+2026-03-31 15:23:49 - P@5: 0.1062
+2026-03-31 15:23:49 - P@10: 0.0691
+2026-03-31 15:23:49 - P@100: 0.0139
+2026-03-31 15:23:49 - P@300: 0.0060
+2026-03-31 15:23:49 - P@500: 0.0039
+2026-03-31 15:23:49 - P@1000: 0.0022
+2026-03-31 15:23:49 - 
+
+2026-03-31 15:23:49 - MRR@1: 0.2315
+2026-03-31 15:23:49 - MRR@3: 0.2829
+2026-03-31 15:23:49 - MRR@5: 0.2940
+2026-03-31 15:23:49 - MRR@10: 0.3039
+2026-03-31 15:23:49 - MRR@100: 0.3147
+2026-03-31 15:23:49 - MRR@300: 0.3153
+2026-03-31 15:23:49 - MRR@500: 0.3154
+2026-03-31 15:23:49 - MRR@1000: 0.3155
+2026-03-31 15:23:49 - 
+NDCG
+2026-03-31 15:23:49 - NDCG@1: 0.2315
+2026-03-31 15:23:49 - NDCG@3: 0.2138
+2026-03-31 15:23:49 - NDCG@5: 0.2200
+2026-03-31 15:23:49 - NDCG@10: 0.2406
+2026-03-31 15:23:49 - NDCG@100: 0.3097
+2026-03-31 15:23:49 - NDCG@300: 0.3345
+2026-03-31 15:23:49 - NDCG@500: 0.3432
+2026-03-31 15:23:49 - NDCG@1000: 0.3537
+2026-03-31 15:23:49 - 
+MAP
+2026-03-31 15:23:49 - MAP@1: 0.1109
+2026-03-31 15:23:49 - MAP@3: 0.1560
+2026-03-31 15:23:49 - MAP@5: 0.1687
+2026-03-31 15:23:49 - MAP@10: 0.1814
+2026-03-31 15:23:49 - MAP@100: 0.1970
+2026-03-31 15:23:49 - MAP@300: 0.1987
+2026-03-31 15:23:49 - MAP@500: 0.1991
+2026-03-31 15:23:49 - MAP@1000: 0.1993
+2026-03-31 15:23:49 - 
+Recall
+2026-03-31 15:23:49 - Recall@1: 0.1109
+2026-03-31 15:23:49 - Recall@3: 0.1948
+2026-03-31 15:23:49 - Recall@5: 0.2318
+2026-03-31 15:23:49 - Recall@10: 0.2949
+2026-03-31 15:23:49 - Recall@100: 0.5635
+2026-03-31 15:23:49 - Recall@300: 0.7006
+2026-03-31 15:23:49 - Recall@500: 0.7569
+2026-03-31 15:23:49 - Recall@1000: 0.8333
+2026-03-31 15:23:49 - Saved results to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa/fiqa_results.json

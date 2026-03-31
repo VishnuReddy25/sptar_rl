@@ -1,0 +1,190 @@
+2026-03-31 12:06:30 - Using provided weak query file: xuyang/data/fiqa_50/100k/weak_queries_50_llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70.jsonl
+2026-03-31 12:06:30 - Using provided weak qrels file: xuyang/data/fiqa_50/100k/weak_train_50_llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70.tsv
+2026-03-31 12:06:30 - Loading Corpus...
+2026-03-31 12:06:30 - Loaded 57638 Documents.
+2026-03-31 12:06:30 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2026-03-31 12:06:30 - Loading Golden Queries...
+2026-03-31 12:06:30 - Loading Weak Queries...
+2026-03-31 12:06:30 - Loading Golden Qrels...
+2026-03-31 12:06:30 - Loading Weak Qrels...
+2026-03-31 12:06:30 - Loaded 24558 Golden+Weak Queries.
+2026-03-31 12:06:30 - Golden+Weak Query Example: Sales Tax Licence/Permit - When is it required and how can I make a use of it as a non-US resident selling in USA?
+2026-03-31 12:06:30 - Loading Corpus...
+2026-03-31 12:06:31 - Loaded 57638 Documents.
+2026-03-31 12:06:31 - Doc Example: {'text': "I'm not saying I don't like the idea of on-the-job training too, but you can't expect the company to do that. Training workers is not their job - they're building software. Perhaps educational systems in the U.S. (or their students) should worry a little about getting marketable skills in exchange for their massive investment in education, rather than getting out with thousands in student debt and then complaining that they aren't qualified to do anything.", 'title': ''}
+2026-03-31 12:06:31 - Loading Queries...
+2026-03-31 12:06:31 - Loaded 500 Queries.
+2026-03-31 12:06:31 - Query Example: Claiming business expenses for a business with no income
+2026-03-31 12:06:31 - Loading existing fine-tuned DPR checkpoint: /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-31 12:06:31 - Load pretrained SentenceTransformer: /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/llama_7b_100k_fixed_v3_best_llama_prompt_2_filtered_70/50/bert-large-uncased-v1-fiqa
+2026-03-31 12:06:32 - Checkpoint loaded — will fine-tune on new GRPO queries
+2026-03-31 12:06:32 - Loaded 24894 training pairs.
+2026-03-31 12:06:32 - dev set contains 57638 documents and 500 queries
+2026-03-31 12:06:32 - Starting to Train...
+2026-03-31 12:22:43 - Information Retrieval Evaluation of the model on the dev dataset in epoch 1.0 after 1556 steps:
+2026-03-31 12:27:17 - Queries: 500
+2026-03-31 12:27:17 - Corpus: 57638
+
+2026-03-31 12:27:17 - Score-Function: cosine
+2026-03-31 12:27:17 - Accuracy@1: 20.40%
+2026-03-31 12:27:17 - Accuracy@3: 28.40%
+2026-03-31 12:27:17 - Accuracy@5: 34.40%
+2026-03-31 12:27:17 - Accuracy@10: 42.80%
+2026-03-31 12:27:17 - Precision@1: 20.40%
+2026-03-31 12:27:17 - Precision@3: 10.87%
+2026-03-31 12:27:17 - Precision@5: 8.68%
+2026-03-31 12:27:17 - Precision@10: 5.88%
+2026-03-31 12:27:17 - Recall@1: 10.46%
+2026-03-31 12:27:17 - Recall@3: 15.65%
+2026-03-31 12:27:17 - Recall@5: 19.13%
+2026-03-31 12:27:17 - Recall@10: 25.61%
+2026-03-31 12:27:17 - MRR@10: 0.2616
+2026-03-31 12:27:17 - NDCG@10: 0.2060
+2026-03-31 12:27:17 - MAP@100: 0.1677
+2026-03-31 12:27:17 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 12:43:27 - Information Retrieval Evaluation of the model on the dev dataset in epoch 2.0 after 3112 steps:
+2026-03-31 12:48:00 - Queries: 500
+2026-03-31 12:48:00 - Corpus: 57638
+
+2026-03-31 12:48:00 - Score-Function: cosine
+2026-03-31 12:48:00 - Accuracy@1: 18.60%
+2026-03-31 12:48:00 - Accuracy@3: 29.20%
+2026-03-31 12:48:00 - Accuracy@5: 34.40%
+2026-03-31 12:48:00 - Accuracy@10: 43.40%
+2026-03-31 12:48:00 - Precision@1: 18.60%
+2026-03-31 12:48:00 - Precision@3: 11.47%
+2026-03-31 12:48:00 - Precision@5: 8.56%
+2026-03-31 12:48:00 - Precision@10: 5.96%
+2026-03-31 12:48:00 - Recall@1: 10.30%
+2026-03-31 12:48:00 - Recall@3: 16.72%
+2026-03-31 12:48:00 - Recall@5: 20.29%
+2026-03-31 12:48:00 - Recall@10: 27.02%
+2026-03-31 12:48:00 - MRR@10: 0.2551
+2026-03-31 12:48:00 - NDCG@10: 0.2109
+2026-03-31 12:48:00 - MAP@100: 0.1723
+2026-03-31 12:48:00 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 13:04:09 - Information Retrieval Evaluation of the model on the dev dataset in epoch 3.0 after 4668 steps:
+2026-03-31 13:08:43 - Queries: 500
+2026-03-31 13:08:43 - Corpus: 57638
+
+2026-03-31 13:08:43 - Score-Function: cosine
+2026-03-31 13:08:43 - Accuracy@1: 22.40%
+2026-03-31 13:08:43 - Accuracy@3: 31.00%
+2026-03-31 13:08:43 - Accuracy@5: 37.80%
+2026-03-31 13:08:43 - Accuracy@10: 44.80%
+2026-03-31 13:08:43 - Precision@1: 22.40%
+2026-03-31 13:08:43 - Precision@3: 12.53%
+2026-03-31 13:08:43 - Precision@5: 9.56%
+2026-03-31 13:08:43 - Precision@10: 6.32%
+2026-03-31 13:08:43 - Recall@1: 12.52%
+2026-03-31 13:08:43 - Recall@3: 18.66%
+2026-03-31 13:08:43 - Recall@5: 22.36%
+2026-03-31 13:08:43 - Recall@10: 28.36%
+2026-03-31 13:08:43 - MRR@10: 0.2866
+2026-03-31 13:08:43 - NDCG@10: 0.2341
+2026-03-31 13:08:43 - MAP@100: 0.1974
+2026-03-31 13:08:43 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 13:24:52 - Information Retrieval Evaluation of the model on the dev dataset in epoch 4.0 after 6224 steps:
+2026-03-31 13:29:26 - Queries: 500
+2026-03-31 13:29:26 - Corpus: 57638
+
+2026-03-31 13:29:26 - Score-Function: cosine
+2026-03-31 13:29:26 - Accuracy@1: 23.20%
+2026-03-31 13:29:26 - Accuracy@3: 34.20%
+2026-03-31 13:29:26 - Accuracy@5: 38.60%
+2026-03-31 13:29:26 - Accuracy@10: 45.80%
+2026-03-31 13:29:26 - Precision@1: 23.20%
+2026-03-31 13:29:26 - Precision@3: 14.20%
+2026-03-31 13:29:26 - Precision@5: 10.00%
+2026-03-31 13:29:26 - Precision@10: 6.72%
+2026-03-31 13:29:26 - Recall@1: 12.85%
+2026-03-31 13:29:26 - Recall@3: 20.66%
+2026-03-31 13:29:26 - Recall@5: 23.98%
+2026-03-31 13:29:26 - Recall@10: 29.63%
+2026-03-31 13:29:26 - MRR@10: 0.3008
+2026-03-31 13:29:26 - NDCG@10: 0.2472
+2026-03-31 13:29:26 - MAP@100: 0.2096
+2026-03-31 13:29:26 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 13:45:42 - Information Retrieval Evaluation of the model on the dev dataset in epoch 5.0 after 7780 steps:
+2026-03-31 13:50:17 - Queries: 500
+2026-03-31 13:50:17 - Corpus: 57638
+
+2026-03-31 13:50:17 - Score-Function: cosine
+2026-03-31 13:50:17 - Accuracy@1: 26.00%
+2026-03-31 13:50:17 - Accuracy@3: 34.60%
+2026-03-31 13:50:17 - Accuracy@5: 41.40%
+2026-03-31 13:50:17 - Accuracy@10: 47.60%
+2026-03-31 13:50:17 - Precision@1: 26.00%
+2026-03-31 13:50:17 - Precision@3: 14.27%
+2026-03-31 13:50:17 - Precision@5: 10.72%
+2026-03-31 13:50:17 - Precision@10: 6.98%
+2026-03-31 13:50:17 - Recall@1: 14.19%
+2026-03-31 13:50:17 - Recall@3: 20.81%
+2026-03-31 13:50:17 - Recall@5: 25.07%
+2026-03-31 13:50:17 - Recall@10: 30.49%
+2026-03-31 13:50:17 - MRR@10: 0.3222
+2026-03-31 13:50:17 - NDCG@10: 0.2599
+2026-03-31 13:50:17 - MAP@100: 0.2213
+2026-03-31 13:50:17 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 14:06:46 - Information Retrieval Evaluation of the model on the dev dataset in epoch 6.0 after 9336 steps:
+2026-03-31 14:11:20 - Queries: 500
+2026-03-31 14:11:20 - Corpus: 57638
+
+2026-03-31 14:11:20 - Score-Function: cosine
+2026-03-31 14:11:20 - Accuracy@1: 25.00%
+2026-03-31 14:11:20 - Accuracy@3: 36.00%
+2026-03-31 14:11:20 - Accuracy@5: 40.60%
+2026-03-31 14:11:20 - Accuracy@10: 48.40%
+2026-03-31 14:11:20 - Precision@1: 25.00%
+2026-03-31 14:11:20 - Precision@3: 14.67%
+2026-03-31 14:11:20 - Precision@5: 10.48%
+2026-03-31 14:11:20 - Precision@10: 6.92%
+2026-03-31 14:11:20 - Recall@1: 13.47%
+2026-03-31 14:11:20 - Recall@3: 21.01%
+2026-03-31 14:11:20 - Recall@5: 24.77%
+2026-03-31 14:11:20 - Recall@10: 31.06%
+2026-03-31 14:11:20 - MRR@10: 0.3185
+2026-03-31 14:11:20 - NDCG@10: 0.2575
+2026-03-31 14:11:20 - MAP@100: 0.2166
+2026-03-31 14:27:49 - Information Retrieval Evaluation of the model on the dev dataset in epoch 7.0 after 10892 steps:
+2026-03-31 14:32:25 - Queries: 500
+2026-03-31 14:32:25 - Corpus: 57638
+
+2026-03-31 14:32:25 - Score-Function: cosine
+2026-03-31 14:32:25 - Accuracy@1: 24.60%
+2026-03-31 14:32:25 - Accuracy@3: 36.60%
+2026-03-31 14:32:25 - Accuracy@5: 41.60%
+2026-03-31 14:32:25 - Accuracy@10: 49.00%
+2026-03-31 14:32:25 - Precision@1: 24.60%
+2026-03-31 14:32:25 - Precision@3: 14.80%
+2026-03-31 14:32:25 - Precision@5: 11.00%
+2026-03-31 14:32:25 - Precision@10: 7.02%
+2026-03-31 14:32:25 - Recall@1: 13.65%
+2026-03-31 14:32:25 - Recall@3: 21.70%
+2026-03-31 14:32:25 - Recall@5: 25.61%
+2026-03-31 14:32:25 - Recall@10: 31.19%
+2026-03-31 14:32:25 - MRR@10: 0.3200
+2026-03-31 14:32:25 - NDCG@10: 0.2602
+2026-03-31 14:32:25 - MAP@100: 0.2193
+2026-03-31 14:32:25 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
+2026-03-31 14:48:51 - Information Retrieval Evaluation of the model on the dev dataset in epoch 8.0 after 12448 steps:
+2026-03-31 14:53:25 - Queries: 500
+2026-03-31 14:53:25 - Corpus: 57638
+
+2026-03-31 14:53:25 - Score-Function: cosine
+2026-03-31 14:53:25 - Accuracy@1: 24.40%
+2026-03-31 14:53:25 - Accuracy@3: 37.40%
+2026-03-31 14:53:25 - Accuracy@5: 42.20%
+2026-03-31 14:53:25 - Accuracy@10: 49.20%
+2026-03-31 14:53:25 - Precision@1: 24.40%
+2026-03-31 14:53:25 - Precision@3: 15.33%
+2026-03-31 14:53:25 - Precision@5: 11.12%
+2026-03-31 14:53:25 - Precision@10: 7.08%
+2026-03-31 14:53:25 - Recall@1: 13.48%
+2026-03-31 14:53:25 - Recall@3: 22.45%
+2026-03-31 14:53:25 - Recall@5: 26.00%
+2026-03-31 14:53:25 - Recall@10: 31.51%
+2026-03-31 14:53:25 - MRR@10: 0.3222
+2026-03-31 14:53:25 - NDCG@10: 0.2637
+2026-03-31 14:53:25 - MAP@100: 0.2229
+2026-03-31 14:53:25 - Save model to /home/aiml_user/vishnu/sptar_v1/zhiyuan/retriever/dpr/train/output/grpo_phase2/50/bert-large-uncased-v1-fiqa
