@@ -1,0 +1,8 @@
+{
+  "best_ndcg_at_10": 0.2937573572402331,
+  "ndcg_history": [
+    0.2937573572402331
+  ],
+  "total_queries_in_pool": 21862,
+  "final_kl_coeff": 0.1
+}
