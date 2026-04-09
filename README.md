@@ -10,7 +10,7 @@ ColBERT, BM25, and BM25CE are not included.
 
 SPTAR is a pipeline that uses soft prompt tuning on an LLM (LLaMA-2-7B) to automatically generate weak document–query pairs, which are then used to train a dense retriever (DPR). The pipeline has two phases:
 
-- **Phase 1** — Initial soft prompt training to generate a seed set of weak queries
+- **Phase 1** — Initial soft prompt training to generate a seed set of weak queries — see [Phase 1 repo](https://github.com/VishnuReddy25/sptar_v1_conference/tree/recall%40100-0.5825)
 - **Phase 2 (this repo)** — GRPO reinforcement loop that improves the soft prompt using DPR-based reward signals, producing a larger and higher-quality query pool
 
 ---
